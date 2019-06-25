@@ -1,0 +1,13 @@
+# Maven build directory
+/target/
+
+# Latexmk auxiliary files
+**/src/*.aux
+**/src/*.fdb_latexmk
+**/src/*.fls
+**/src/*.log
+
+# Image Makefile targets
+**/src/*.pdf
+**/src/*.png
+**/src/*.svg

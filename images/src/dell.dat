@@ -1,0 +1,8 @@
+Benchmark     Mode  Cnt    Score    Error  Units
+copyArgb     thrpt   25  461.929   0.099  ops/s
+copyArgbPre  thrpt   25  398.973   0.096  ops/s
+copyBgraPre  thrpt   25  624.492   0.247  ops/s
+drawArgb     thrpt   25  832.507  43.935  ops/s
+drawArgbPre  thrpt   25  287.523   0.075  ops/s
+drawBgraPre  thrpt   25  352.405   0.119  ops/s
+onceBgraPre  thrpt   25  656.757   0.904  ops/s

@@ -1,0 +1,57 @@
+% ======================================================================
+% chart.tex - creates bar charts of benchmark results
+% Copyright (C) 2019 John Neffenger
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% ======================================================================
+\documentclass[12pt,tikz,border=5mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{libertine}
+\usepackage{microtype}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\providecommand{\pdftitle}{Converting AWT Images to JavaFX Images}
+\providecommand{\cpu}{Processor information}
+\providecommand{\data}{dell.dat}
+\pdfinfo{
+    /Title (\pdftitle)
+    /Subject (Benchmark results using the Java Microbenchmark Harness)
+    /Author (John Neffenger)
+    /Keywords (AWT, JavaFX, toFXImage, JMH)
+}
+
+\begin{document}
+\begin{tikzpicture}[font=\sffamily]
+\begin{axis}[
+    title=\pdftitle\\\small{\cpu},
+    title style={align=center},
+    width=148mm,
+    height=\axisdefaultheight,
+    xbar,
+    xmin=0,
+    xmajorgrids,
+    xlabel=Throughput (frames per second),
+    x tick label style={/pgf/number format/assume math mode=true},
+    symbolic y coords={onceBgraPre,drawBgraPre,drawArgbPre,%
+        drawArgb,copyBgraPre,copyArgbPre,copyArgb},
+    ytick=data,
+]
+\addplot[draw=black,fill=lightgray,error bars/.cd,x dir=both,x explicit]
+table[x=Score,y=Benchmark,x error=Error,y error=Error]{\data};
+\end{axis}
+\end{tikzpicture}
+\end{document}
