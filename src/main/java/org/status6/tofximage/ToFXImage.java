@@ -25,9 +25,12 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
 import java.util.ArrayList;
+import java.util.stream.IntStream;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.image.PixelBuffer;
 import javafx.scene.image.PixelFormat;
+import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
@@ -320,6 +323,61 @@ public class ToFXImage {
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
         if (DEBUG_FRAMES && NIO_INT_ARGB) {
             saveImage("onceBgraPre-" + awt.index, jfx.image);
+        }
+        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+    }
+
+    @Benchmark
+    public void loopArgb(SourceAwtImage awt, TargetJfxImage jfx) {
+        BufferedImage awtImage = awt.frames.get(awt.index);
+        PixelWriter writer = jfx.image.getPixelWriter();
+        for (int y = 0; y < awt.height; y++) {
+            for (int x = 0; x < awt.width; x++) {
+                writer.setArgb(x, y, awtImage.getRGB(x, y));
+            }
+        }
+        if (DEBUG_FRAMES) {
+            saveImage("loopArgb-" + awt.index, jfx.image);
+        }
+        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+    }
+
+    @Benchmark
+    public void orderedArgb(SourceAwtImage awt, TargetJfxImage jfx) {
+        BufferedImage awtImage = awt.frames.get(awt.index);
+        PixelWriter writer = jfx.image.getPixelWriter();
+        IntStream.range(0, awt.width * awt.height).forEachOrdered((i) -> {
+            int x = i % awt.width;
+            int y = i / awt.width;
+            writer.setArgb(x, y, awtImage.getRGB(x, y));
+        });
+        if (DEBUG_FRAMES) {
+            saveImage("orderedArgb-" + awt.index, jfx.image);
+        }
+        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+    }
+
+    @Benchmark
+    public void parallelArgb(SourceAwtImage awt, TargetJfxImage jfx) {
+        BufferedImage awtImage = awt.frames.get(awt.index);
+        PixelWriter writer = jfx.image.getPixelWriter();
+        IntStream.range(0, awt.width * awt.height).parallel().forEach((i) -> {
+            int x = i % awt.width;
+            int y = i / awt.width;
+            writer.setArgb(x, y, awtImage.getRGB(x, y));
+        });
+        if (DEBUG_FRAMES) {
+            saveImage("parallelArgb-" + awt.index, jfx.image);
+        }
+        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+    }
+
+    @Benchmark
+    public void swingFXUtils(SourceAwtImage awt, TargetJfxImage jfx, Blackhole blackhole) {
+        BufferedImage awtImage = awt.frames.get(awt.index);
+        blackhole.consume(SwingFXUtils.toFXImage(awtImage, jfx.image));
+        if (DEBUG_FRAMES) {
+            saveImage("swingFXUtils-" + awt.index, jfx.image);
         }
         awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
     }
