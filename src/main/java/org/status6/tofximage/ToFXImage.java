@@ -108,6 +108,10 @@ public class ToFXImage {
         private int height;
         private int index;
 
+        private void nextFrame() {
+            index = index == frames.size() - 1 ? 0 : index + 1;
+        }
+
         @Setup
         public void doSetup() {
             frames = loadFrames("doll-dancing.gif");
@@ -242,7 +246,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("drawArgb-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -258,7 +262,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("drawArgbPre-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -270,7 +274,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("copyArgb-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -282,7 +286,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("copyArgbPre-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -299,7 +303,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("drawBgraPre-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -312,7 +316,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("copyBgraPre-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -324,7 +328,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES && NIO_INT_ARGB) {
             saveImage("onceBgraPre-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -339,7 +343,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("loopArgb-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -354,7 +358,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("orderedArgb-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -369,7 +373,7 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("parallelArgb-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 
     @Benchmark
@@ -379,6 +383,6 @@ public class ToFXImage {
         if (DEBUG_FRAMES) {
             saveImage("swingFXUtils-" + awt.index, jfx.image);
         }
-        awt.index = awt.index == awt.frames.size() - 1 ? 0 : awt.index + 1;
+        awt.nextFrame();
     }
 }
