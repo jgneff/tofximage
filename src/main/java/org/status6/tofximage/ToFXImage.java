@@ -234,7 +234,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void drawArgb(SourceAwtImage awt, TempArgbImage tmp, TargetJfxImage jfx) {
+    public void drawSet(SourceAwtImage awt, TempArgbImage tmp, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         if (CLEAR_FRAMES) {
             tmp.graphics.clearRect(0, 0, awt.width, awt.height);
@@ -250,7 +250,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void drawArgbPre(SourceAwtImage awt, TempArgbPreImage tmp, TargetJfxImage jfx) {
+    public void drawPreSetPre(SourceAwtImage awt, TempArgbPreImage tmp, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         if (CLEAR_FRAMES) {
             tmp.graphics.clearRect(0, 0, awt.width, awt.height);
@@ -266,7 +266,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void copyArgb(SourceAwtImage awt, TempIntArray tmp, TargetJfxImage jfx) {
+    public void getSet(SourceAwtImage awt, TempIntArray tmp, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         awtImage.getRGB(0, 0, awt.width, awt.height, tmp.array, 0, awt.width);
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
@@ -278,7 +278,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void copyArgbPre(SourceAwtImage awt, TempIntArray tmp, TargetJfxImage jfx) {
+    public void getSetPre(SourceAwtImage awt, TempIntArray tmp, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         awtImage.getRGB(0, 0, awt.width, awt.height, tmp.array, 0, awt.width);
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
@@ -290,7 +290,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void drawBgraPre(SourceAwtImage awt, TempArgbPreImage tmp, TargetByteBuffer jfx, Blackhole blackhole) {
+    public void nioDrawPut(SourceAwtImage awt, TempArgbPreImage tmp, TargetByteBuffer jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         if (CLEAR_FRAMES) {
             tmp.graphics.clearRect(0, 0, awt.width, awt.height);
@@ -307,7 +307,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void copyBgraPre(SourceAwtImage awt, TempIntArray tmp, TargetByteBuffer jfx, Blackhole blackhole) {
+    public void nioGetPut(SourceAwtImage awt, TempIntArray tmp, TargetByteBuffer jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         awtImage.getRGB(0, 0, awt.width, awt.height, tmp.array, 0, awt.width);
         jfx.buffer.asIntBuffer().put(tmp.array);
@@ -320,7 +320,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void onceBgraPre(SourceAwtImage awt, TargetIntBuffer jfx, Blackhole blackhole) {
+    public void nioGetOnly(SourceAwtImage awt, TargetIntBuffer jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         awtImage.getRGB(0, 0, awt.width, awt.height, jfx.buffer.array(), 0, awt.width);
         // Simulates Pixelbuffer.updateBuffer on JavaFX Application Thread.
@@ -332,7 +332,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void loopArgb(SourceAwtImage awt, TargetJfxImage jfx) {
+    public void forLoops(SourceAwtImage awt, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         PixelWriter writer = jfx.image.getPixelWriter();
         for (int y = 0; y < awt.height; y++) {
@@ -347,7 +347,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void orderedArgb(SourceAwtImage awt, TargetJfxImage jfx) {
+    public void streamOrdered(SourceAwtImage awt, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         PixelWriter writer = jfx.image.getPixelWriter();
         IntStream.range(0, awt.width * awt.height).forEachOrdered((i) -> {
@@ -362,7 +362,7 @@ public class ToFXImage {
     }
 
     @Benchmark
-    public void parallelArgb(SourceAwtImage awt, TargetJfxImage jfx) {
+    public void streamParallel(SourceAwtImage awt, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         PixelWriter writer = jfx.image.getPixelWriter();
         IntStream.range(0, awt.width * awt.height).parallel().forEach((i) -> {
