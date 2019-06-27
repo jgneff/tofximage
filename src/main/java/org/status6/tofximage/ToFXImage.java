@@ -244,7 +244,7 @@ public class ToFXImage {
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbInstance(), data, 0, awt.width);
         if (DEBUG_FRAMES) {
-            saveImage("drawArgbPre-" + awt.index, jfx.image);
+            saveImage("drawPreSet-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -260,7 +260,7 @@ public class ToFXImage {
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbPreInstance(), data, 0, awt.width);
         if (DEBUG_FRAMES) {
-            saveImage("drawArgbPre-" + awt.index, jfx.image);
+            saveImage("drawPreSetPre-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -276,7 +276,7 @@ public class ToFXImage {
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbInstance(), data, 0, awt.width);
         if (DEBUG_FRAMES) {
-            saveImage("drawArgb-" + awt.index, jfx.image);
+            saveImage("drawSet-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -292,7 +292,7 @@ public class ToFXImage {
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbPreInstance(), data, 0, awt.width);
         if (DEBUG_FRAMES) {
-            saveImage("drawArgb-" + awt.index, jfx.image);
+            saveImage("drawSetPre-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -307,7 +307,7 @@ public class ToFXImage {
             }
         }
         if (DEBUG_FRAMES) {
-            saveImage("loopArgb-" + awt.index, jfx.image);
+            saveImage("forLoops-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -319,7 +319,7 @@ public class ToFXImage {
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbInstance(), tmp.array, 0, awt.width);
         if (DEBUG_FRAMES) {
-            saveImage("copyArgb-" + awt.index, jfx.image);
+            saveImage("getSet-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -331,7 +331,7 @@ public class ToFXImage {
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbPreInstance(), tmp.array, 0, awt.width);
         if (DEBUG_FRAMES) {
-            saveImage("copyArgbPre-" + awt.index, jfx.image);
+            saveImage("getSetPre-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -348,7 +348,7 @@ public class ToFXImage {
         // Simulates Pixelbuffer.updateBuffer on JavaFX Application Thread.
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
         if (DEBUG_FRAMES) {
-            saveImage("drawBgraPre-" + awt.index, jfx.image);
+            saveImage("nioDrawPut-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -360,7 +360,7 @@ public class ToFXImage {
         // Simulates Pixelbuffer.updateBuffer on JavaFX Application Thread.
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
         if (DEBUG_FRAMES && NIO_INT_ARGB) {
-            saveImage("onceBgraPre-" + awt.index, jfx.image);
+            saveImage("nioGetOnly-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -373,7 +373,7 @@ public class ToFXImage {
         // Simulates Pixelbuffer.updateBuffer on JavaFX Application Thread.
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
         if (DEBUG_FRAMES) {
-            saveImage("copyBgraPre-" + awt.index, jfx.image);
+            saveImage("nioGetPut-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -388,7 +388,7 @@ public class ToFXImage {
             writer.setArgb(x, y, awtImage.getRGB(x, y));
         });
         if (DEBUG_FRAMES) {
-            saveImage("orderedArgb-" + awt.index, jfx.image);
+            saveImage("streamOrdered-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
@@ -403,7 +403,7 @@ public class ToFXImage {
             writer.setArgb(x, y, awtImage.getRGB(x, y));
         });
         if (DEBUG_FRAMES) {
-            saveImage("parallelArgb-" + awt.index, jfx.image);
+            saveImage("streamParallel-" + awt.index, jfx.image);
         }
         awt.nextFrame();
     }
