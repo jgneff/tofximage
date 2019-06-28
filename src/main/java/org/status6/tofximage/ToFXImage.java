@@ -59,20 +59,28 @@ public class ToFXImage {
     private static final boolean CLEAR_FRAMES = false;
     private static final boolean DEBUG_FRAMES = false;
 
-    private static void saveImage(String name, WritableImage jfxImage) {
-        var reader = jfxImage.getPixelReader();
-        int width = (int) jfxImage.getWidth();
-        int height = (int) jfxImage.getHeight();
-        var awtImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-        for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                awtImage.setRGB(x, y, reader.getArgb(x, y));
-            }
+    private static void clearRect(Graphics2D graphics, int width, int height) {
+        if (CLEAR_FRAMES) {
+            graphics.clearRect(0, 0, width, height);
         }
-        try {
-            ImageIO.write(awtImage, "png", new File(name.concat(".png")));
-        } catch (IOException ex) {
-            System.err.println(ex);
+    }
+
+    private static void saveImage(String name, WritableImage jfxImage) {
+        if (DEBUG_FRAMES) {
+            var reader = jfxImage.getPixelReader();
+            int width = (int) jfxImage.getWidth();
+            int height = (int) jfxImage.getHeight();
+            var awtImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+            for (int y = 0; y < height; y++) {
+                for (int x = 0; x < width; x++) {
+                    awtImage.setRGB(x, y, reader.getArgb(x, y));
+                }
+            }
+            try {
+                ImageIO.write(awtImage, "png", new File(name.concat(".png")));
+            } catch (IOException ex) {
+                System.err.println(ex);
+            }
         }
     }
 
@@ -233,64 +241,48 @@ public class ToFXImage {
     @Benchmark
     public void drawPreSet(SourceAwtImage awt, TempArgbPreImage tmp, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
-        if (CLEAR_FRAMES) {
-            tmp.graphics.clearRect(0, 0, awt.width, awt.height);
-        }
+        clearRect(tmp.graphics, awt.width, awt.height);
         tmp.graphics.drawImage(awtImage, 0, 0, null);
         int[] data = ((DataBufferInt) tmp.image.getRaster().getDataBuffer()).getData();
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbInstance(), data, 0, awt.width);
-        if (DEBUG_FRAMES) {
-            saveImage("drawPreSet-" + awt.index, jfx.image);
-        }
+        saveImage("drawPreSet-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
     @Benchmark
     public void drawPreSetPre(SourceAwtImage awt, TempArgbPreImage tmp, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
-        if (CLEAR_FRAMES) {
-            tmp.graphics.clearRect(0, 0, awt.width, awt.height);
-        }
+        clearRect(tmp.graphics, awt.width, awt.height);
         tmp.graphics.drawImage(awtImage, 0, 0, null);
         int[] data = ((DataBufferInt) tmp.image.getRaster().getDataBuffer()).getData();
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbPreInstance(), data, 0, awt.width);
-        if (DEBUG_FRAMES) {
-            saveImage("drawPreSetPre-" + awt.index, jfx.image);
-        }
+        saveImage("drawPreSetPre-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
     @Benchmark
     public void drawSet(SourceAwtImage awt, TempArgbImage tmp, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
-        if (CLEAR_FRAMES) {
-            tmp.graphics.clearRect(0, 0, awt.width, awt.height);
-        }
+        clearRect(tmp.graphics, awt.width, awt.height);
         tmp.graphics.drawImage(awtImage, 0, 0, null);
         int[] data = ((DataBufferInt) tmp.image.getRaster().getDataBuffer()).getData();
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbInstance(), data, 0, awt.width);
-        if (DEBUG_FRAMES) {
-            saveImage("drawSet-" + awt.index, jfx.image);
-        }
+        saveImage("drawSet-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
     @Benchmark
     public void drawSetPre(SourceAwtImage awt, TempArgbImage tmp, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
-        if (CLEAR_FRAMES) {
-            tmp.graphics.clearRect(0, 0, awt.width, awt.height);
-        }
+        clearRect(tmp.graphics, awt.width, awt.height);
         tmp.graphics.drawImage(awtImage, 0, 0, null);
         int[] data = ((DataBufferInt) tmp.image.getRaster().getDataBuffer()).getData();
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbPreInstance(), data, 0, awt.width);
-        if (DEBUG_FRAMES) {
-            saveImage("drawSetPre-" + awt.index, jfx.image);
-        }
+        saveImage("drawSetPre-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
@@ -303,9 +295,7 @@ public class ToFXImage {
                 writer.setArgb(x, y, awtImage.getRGB(x, y));
             }
         }
-        if (DEBUG_FRAMES) {
-            saveImage("forLoops-" + awt.index, jfx.image);
-        }
+        saveImage("forLoops-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
@@ -315,9 +305,7 @@ public class ToFXImage {
         awtImage.getRGB(0, 0, awt.width, awt.height, tmp.array, 0, awt.width);
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbInstance(), tmp.array, 0, awt.width);
-        if (DEBUG_FRAMES) {
-            saveImage("getSet-" + awt.index, jfx.image);
-        }
+        saveImage("getSet-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
@@ -327,26 +315,20 @@ public class ToFXImage {
         awtImage.getRGB(0, 0, awt.width, awt.height, tmp.array, 0, awt.width);
         jfx.image.getPixelWriter().setPixels(0, 0, awt.width, awt.height,
                 PixelFormat.getIntArgbPreInstance(), tmp.array, 0, awt.width);
-        if (DEBUG_FRAMES) {
-            saveImage("getSetPre-" + awt.index, jfx.image);
-        }
+        saveImage("getSetPre-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
     @Benchmark
     public void nioDrawPut(SourceAwtImage awt, TempArgbPreImage tmp, TargetByteBuffer jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
-        if (CLEAR_FRAMES) {
-            tmp.graphics.clearRect(0, 0, awt.width, awt.height);
-        }
+        clearRect(tmp.graphics, awt.width, awt.height);
         tmp.graphics.drawImage(awtImage, 0, 0, null);
         int[] data = ((DataBufferInt) tmp.image.getRaster().getDataBuffer()).getData();
         jfx.buffer.asIntBuffer().put(data);
         // Simulates Pixelbuffer.updateBuffer on JavaFX Application Thread.
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
-        if (DEBUG_FRAMES) {
-            saveImage("nioDrawPut-" + awt.index, jfx.image);
-        }
+        saveImage("nioDrawPut-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
@@ -356,9 +338,7 @@ public class ToFXImage {
         awtImage.getRGB(0, 0, awt.width, awt.height, jfx.buffer.array(), 0, awt.width);
         // Simulates Pixelbuffer.updateBuffer on JavaFX Application Thread.
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
-        if (DEBUG_FRAMES) {
-            saveImage("nioGetOnly-" + awt.index, jfx.image);
-        }
+        saveImage("nioGetOnly-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
@@ -369,9 +349,7 @@ public class ToFXImage {
         jfx.buffer.asIntBuffer().put(tmp.array);
         // Simulates Pixelbuffer.updateBuffer on JavaFX Application Thread.
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
-        if (DEBUG_FRAMES) {
-            saveImage("nioGetPut-" + awt.index, jfx.image);
-        }
+        saveImage("nioGetPut-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
@@ -384,9 +362,7 @@ public class ToFXImage {
             int y = i / awt.width;
             writer.setArgb(x, y, awtImage.getRGB(x, y));
         });
-        if (DEBUG_FRAMES) {
-            saveImage("streamOrdered-" + awt.index, jfx.image);
-        }
+        saveImage("streamOrdered-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
@@ -399,9 +375,7 @@ public class ToFXImage {
             int y = i / awt.width;
             writer.setArgb(x, y, awtImage.getRGB(x, y));
         });
-        if (DEBUG_FRAMES) {
-            saveImage("streamParallel-" + awt.index, jfx.image);
-        }
+        saveImage("streamParallel-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
@@ -409,9 +383,7 @@ public class ToFXImage {
     public void swingFXUtils(SourceAwtImage awt, TargetJfxImage jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         blackhole.consume(SwingFXUtils.toFXImage(awtImage, jfx.image));
-        if (DEBUG_FRAMES) {
-            saveImage("swingFXUtils-" + awt.index, jfx.image);
-        }
+        saveImage("swingFXUtils-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 }
