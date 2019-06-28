@@ -58,7 +58,6 @@ public class ToFXImage {
 
     private static final boolean CLEAR_FRAMES = false;
     private static final boolean DEBUG_FRAMES = false;
-    private static final boolean NIO_INT_ARGB = false;
 
     private static void saveImage(String name, WritableImage jfxImage) {
         var reader = jfxImage.getPixelReader();
@@ -171,10 +170,8 @@ public class ToFXImage {
         @Setup
         public void doSetup(SourceAwtImage awt) {
             buffer = IntBuffer.allocate(awt.width * awt.height);
-            pixels = new PixelBuffer<>(awt.width, awt.height, buffer, PixelFormat.getIntArgbInstance());
-            if (NIO_INT_ARGB) {
-                image = new WritableImage(pixels);
-            }
+            pixels = new PixelBuffer<>(awt.width, awt.height, buffer, PixelFormat.getIntArgbPreInstance());
+            image = new WritableImage(pixels);
         }
 
         @TearDown
@@ -359,7 +356,7 @@ public class ToFXImage {
         awtImage.getRGB(0, 0, awt.width, awt.height, jfx.buffer.array(), 0, awt.width);
         // Simulates Pixelbuffer.updateBuffer on JavaFX Application Thread.
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
-        if (DEBUG_FRAMES && NIO_INT_ARGB) {
+        if (DEBUG_FRAMES) {
             saveImage("nioGetOnly-" + awt.index, jfx.image);
         }
         awt.nextFrame();

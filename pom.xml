@@ -60,7 +60,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-            <version>13-internal+0-2019-06-14-080337</version>
+            <version>13-internal+0-2019-06-28-063809</version>
         </dependency>
     </dependencies>
 
