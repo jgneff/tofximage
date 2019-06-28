@@ -1,4 +1,3 @@
-john@t3420:~/src/github/pixel-buffer-jmh$ ~/opt/jdk-12.0.1+12/bin/java -Djava.library.path=$HOME/lib/javafx-sdk-13-dev/lib -jar target/benchmarks.jar
 WARNING: An illegal reflective access operation has occurred
 WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (file:/home/john/src/github/pixel-buffer-jmh/target/benchmarks.jar) to field java.io.Console.cs
 WARNING: Please consider reporting this to the maintainers of org.openjdk.jmh.util.Utils

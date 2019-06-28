@@ -42,10 +42,10 @@ $ $HOME/opt/jdk-12.0.1/bin/java -jar target/benchmarks.jar -h
 
 ## Results
 
-The chart below shows the results of the tests on a Dell Precision Tower 3420 workstation. The [Dell log file](logs/dell-2019-06-14.log) contains the test output.
+The chart below shows the results of the tests on a Dell Precision Tower 3420 workstation. The [Dell log file](logs/dell-2019-06-27.log) contains the test output.
 
-![Results on 3.30 GHz Intel Xeon Processor E3-1225 v5](images/dell-2019-06-14.png)
+![Results on 3.30 GHz Intel Xeon Processor E3-1225 v5](images/dell-2019-06-27.png)
 
-The chart below shows the results of the tests on a Kobo Touch N905B e-reader. The [Kobo log file](logs/kobo-2019-06-14.log) contains the test output.
+The chart below shows the results of the tests on a Kobo Touch N905B e-reader. The [Kobo log file](logs/kobo-2019-06-27.log) contains the test output.
 
-![Results on 800 MHz NXP i.MX507 ARM Cortex-A8](images/kobo-2019-06-14.png)
+![Results on 800 MHz NXP i.MX507 ARM Cortex-A8](images/kobo-2019-06-27.png)

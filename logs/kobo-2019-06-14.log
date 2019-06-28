@@ -1,4 +1,3 @@
-ubuntu@kobob:~$ ~/opt/jdk-13-linux-arm-server-release/bin/java -Djava.library.path=$HOME/lib/armv6hf-sdk/lib -Dprism.order=sw -jar lib/benchmarks.jar
 WARNING: An illegal reflective access operation has occurred
 WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (file:/home/ubuntu/lib/benchmarks.jar) to field java.io.Console.cs
 WARNING: Please consider reporting this to the maintainers of org.openjdk.jmh.util.Utils

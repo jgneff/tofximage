@@ -15,7 +15,7 @@
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % ======================================================================
-\documentclass[12pt,tikz,border=5mm]{standalone}
+\documentclass[12pt,tikz,border=3mm]{standalone}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -40,14 +40,15 @@
     title=\pdftitle\\\small{\cpu},
     title style={align=center},
     width=148mm,
-    height=\axisdefaultheight,
+    height=105mm,
     xbar,
     xmin=0,
     xmajorgrids,
     xlabel=Throughput (frames per second),
     x tick label style={/pgf/number format/assume math mode=true},
-    symbolic y coords={onceBgraPre,drawBgraPre,drawArgbPre,%
-        drawArgb,copyBgraPre,copyArgbPre,copyArgb},
+    symbolic y coords={swingFXUtils,streamParallel,streamOrdered,%
+        nioGetPut,nioGetOnly,nioDrawPut,getSetPre,getSet,forLoops,%
+        drawSetPre,drawSet,drawPreSetPre,drawPreSet},
     ytick=data,
 ]
 \addplot[draw=black,fill=lightgray,error bars/.cd,x dir=both,x explicit]
