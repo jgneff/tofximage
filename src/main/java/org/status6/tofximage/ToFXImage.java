@@ -45,8 +45,8 @@ import org.openjdk.jmh.infra.Blackhole;
  * Compares the performance of various methods for converting an AWT image to a
  * JavaFX image. Run a quick test with a command like the following:
  * <pre>{@code
- * $HOME/opt/jdk-12.0.1/bin/java \
- *   -Djava.library.path=$HOME/lib/javafx-sdk-13-dev/lib \
+ * $HOME/opt/jdk-13/bin/java \
+ *   -Djava.library.path=$HOME/lib/javafx-sdk-14-dev/lib \
  *   -jar target/benchmarks.jar -f 1 -i 1 -wi 1
  * }</pre>
  * <p>
