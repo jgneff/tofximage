@@ -60,7 +60,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-            <version>14-ea+1</version>
+            <version>14-ea+2</version>
         </dependency>
     </dependencies>
 
@@ -70,12 +70,12 @@ THE POSSIBILITY OF SUCH DAMAGE.
         <!--
           JMH version to use with this project.
         -->
-        <jmh.version>1.21</jmh.version>
+        <jmh.version>1.22</jmh.version>
 
         <!--
           Java source/target to use for compilation.
         -->
-        <javac.target>13</javac.target>
+        <javac.target>11</javac.target>
 
         <!--
           Name of the benchmark Uber-JAR to generate.
@@ -90,9 +90,8 @@ THE POSSIBILITY OF SUCH DAMAGE.
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <compilerVersion>${javac.target}</compilerVersion>
-                    <source>13</source>
-                    <target>13</target>
+                    <source>${javac.target}</source>
+                    <target>${javac.target}</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -150,7 +149,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.1.2</version>
+                    <version>3.2.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-javadoc-plugin</artifactId>
@@ -166,11 +165,11 @@ THE POSSIBILITY OF SUCH DAMAGE.
                 </plugin>
                 <plugin>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.2.0</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.0.0-M3</version>
+                    <version>3.0.0-M4</version>
                 </plugin>
             </plugins>
         </pluginManagement>
