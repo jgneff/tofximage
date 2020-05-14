@@ -1,4 +1,4 @@
-# AWT to JavaFX Image Conversion
+# AWT to JavaFX Image Conversion Benchmarks
 
 This project looks at ways to convert an AWT image to a JavaFX image as alternatives to the method provided by [`SwingFXUtils.toFXImage`](https://github.com/javafxports/openjdk-jfx/blob/develop/modules/javafx.swing/src/main/java/javafx/embed/swing/SwingFXUtils.java). It compares the performance of the various methods using the [Java Microbenchmark Harness](https://openjdk.java.net/projects/code-tools/jmh/). The project includes benchmarks that use the `PixelBuffer` class proposed by [pull request #472](https://github.com/javafxports/openjdk-jfx/pull/472), "JDK-8167148: Add native rendering support by supporting WritableImages backed by NIO ByteBuffers."
 
