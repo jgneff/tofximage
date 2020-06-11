@@ -328,7 +328,7 @@ public class Benchmarks {
      * @param jfx the target JavaFX image
      */
     @Benchmark
-    public void forLoopRowByRow(SourceAwtImage awt, TargetJfxImage jfx) {
+    public void forLoopsNested(SourceAwtImage awt, TargetJfxImage jfx) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         PixelWriter writer = jfx.image.getPixelWriter();
         for (int y = 0; y < awt.height; y++) {
@@ -336,12 +336,12 @@ public class Benchmarks {
                 writer.setArgb(x, y, awtImage.getRGB(x, y));
             }
         }
-        saveImage("forLoopRowByRow-" + awt.index, jfx.image);
+        saveImage("forLoopsNested" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
     /**
-     * Draws the source image into an intermediate AWT image; then gets the
+     * Draws the source AWT image into an intermediate AWT image; then gets the
      * intermediate raster data and puts it into the byte buffer of a
      * {@code PixelBuffer}. This method copies pixels in the INT_ARGB_PRE format
      * into a byte buffer with little-endian byte order as BYTE_BGRA_PRE pixels
@@ -355,7 +355,7 @@ public class Benchmarks {
      * {@code PixelBuffer.updateBuffer}
      */
     @Benchmark
-    public void putArgbPreIntoByteBuffer(SourceAwtImage awt, TempArgbPreImage tmp, TargetByteBuffer jfx, Blackhole blackhole) {
+    public void putArgbPreIntoBytes(SourceAwtImage awt, TempArgbPreImage tmp, TargetByteBuffer jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         clearRect(tmp.graphics, awt.width, awt.height);
         tmp.graphics.drawImage(awtImage, 0, 0, null);
@@ -363,12 +363,12 @@ public class Benchmarks {
         jfx.buffer.asIntBuffer().put(data);
         // Simulates PixelBuffer.updateBuffer on JavaFX Application Thread
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
-        saveImage("putArgbPreIntoByteBuffer-" + awt.index, jfx.image);
+        saveImage("putArgbPreIntoBytes-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
     /**
-     * Draws the source image into an intermediate AWT image; then gets the
+     * Draws the source AWT image into an intermediate AWT image; then gets the
      * intermediate raster data and puts it into the integer buffer of a
      * {@code PixelBuffer}. This method copies pixels in the INT_ARGB_PRE format
      * into an integer buffer as INT_ARGB_PRE pixels (correct).
@@ -381,7 +381,7 @@ public class Benchmarks {
      * {@code PixelBuffer.updateBuffer}
      */
     @Benchmark
-    public void putArgbPreIntoIntBuffer(SourceAwtImage awt, TempArgbPreImage tmp, TargetIntBuffer jfx, Blackhole blackhole) {
+    public void putArgbPreIntoInts(SourceAwtImage awt, TempArgbPreImage tmp, TargetIntBuffer jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         clearRect(tmp.graphics, awt.width, awt.height);
         tmp.graphics.drawImage(awtImage, 0, 0, null);
@@ -389,14 +389,14 @@ public class Benchmarks {
         jfx.buffer.put(data);
         // Simulates PixelBuffer.updateBuffer on JavaFX Application Thread
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
-        saveImage("putArgbPreIntoIntBuffer-" + awt.index, jfx.image);
+        saveImage("putArgbPreIntoInts-" + awt.index, jfx.image);
         jfx.buffer.clear();
         awt.nextFrame();
     }
 
     /**
-     * Gets the pixels of the source image into an intermediate integer array;
-     * then puts the pixels into the byte buffer of a {@code PixelBuffer}. This
+     * Gets the pixels of the source AWT image into an intermediate array; then
+     * puts the pixels into the byte buffer of a {@code PixelBuffer}. This
      * method copies pixels in the INT_ARGB format into a byte buffer with
      * little-endian byte order as BYTE_BGRA_PRE pixels (wrong alpha).
      *
@@ -408,20 +408,20 @@ public class Benchmarks {
      * {@code PixelBuffer.updateBuffer}
      */
     @Benchmark
-    public void putArrayIntoByteBuffer(SourceAwtImage awt, TempArray tmp, TargetByteBuffer jfx, Blackhole blackhole) {
+    public void putArrayIntoBytes(SourceAwtImage awt, TempArray tmp, TargetByteBuffer jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         awtImage.getRGB(0, 0, awt.width, awt.height, tmp.array, 0, awt.width);
         jfx.buffer.asIntBuffer().put(tmp.array);
         // Simulates PixelBuffer.updateBuffer on JavaFX Application Thread
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
-        saveImage("putArrayIntoByteBuffer-" + awt.index, jfx.image);
+        saveImage("putArrayIntoBytes-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
     /**
-     * Gets the pixels fo the source image directly into the integer buffer of a
-     * {@code PixelBuffer}. This method copies pixels in the INT_ARGB format
-     * into an integer buffer as INT_ARGB_PRE pixels (wrong alpha).
+     * Gets the pixels of the source AWT image directly into the integer buffer
+     * of a {@code PixelBuffer}. This method copies pixels in the INT_ARGB
+     * format into an integer buffer as INT_ARGB_PRE pixels (wrong alpha).
      *
      * @param awt the source AWT image
      * @param jfx the target JavaFX image backed by a
@@ -430,17 +430,17 @@ public class Benchmarks {
      * {@code PixelBuffer.updateBuffer}
      */
     @Benchmark
-    public void putDirectIntoIntBuffer(SourceAwtImage awt, TargetIntBuffer jfx, Blackhole blackhole) {
+    public void putDirectIntoInts(SourceAwtImage awt, TargetIntBuffer jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         awtImage.getRGB(0, 0, awt.width, awt.height, jfx.buffer.array(), 0, awt.width);
         // Simulates PixelBuffer.updateBuffer on JavaFX Application Thread
         blackhole.consume(new Rectangle2D(0, 0, awt.width, awt.height));
-        saveImage("putDirectIntoIntBuffer-" + awt.index, jfx.image);
+        saveImage("putDirectIntoInts-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 
     /**
-     * Draws the source image into an intermediate AWT image; then gets the
+     * Draws the source AWT image into an intermediate AWT image; then gets the
      * intermediate raster data and writes it to the JavaFX image using a
      * {@code PixelWriter}. This method copies pixels in the INT_ARGB format as
      * INT_ARGB pixels (correct).
@@ -462,7 +462,7 @@ public class Benchmarks {
     }
 
     /**
-     * Draws the source image into an intermediate AWT image; then gets the
+     * Draws the source AWT image into an intermediate AWT image; then gets the
      * intermediate raster data and writes it to the JavaFX image using a
      * {@code PixelWriter}. This method copies pixels in the INT_ARGB format as
      * INT_ARGB_PRE pixels (wrong alpha).
@@ -484,7 +484,7 @@ public class Benchmarks {
     }
 
     /**
-     * Draws the source image into an intermediate AWT image; then gets the
+     * Draws the source AWT image into an intermediate AWT image; then gets the
      * intermediate raster data and writes it to the JavaFX image using a
      * {@code PixelWriter}. This method copies pixels in the INT_ARGB_PRE format
      * as INT_ARGB pixels (wrong alpha).
@@ -506,7 +506,7 @@ public class Benchmarks {
     }
 
     /**
-     * Draws the source image into an intermediate AWT image; then gets the
+     * Draws the source AWT image into an intermediate AWT image; then gets the
      * intermediate raster data and writes it to the JavaFX image using a
      * {@code PixelWriter}. This method copies pixels in the INT_ARGB_PRE format
      * as INT_ARGB_PRE pixels (correct).
@@ -528,10 +528,9 @@ public class Benchmarks {
     }
 
     /**
-     * Gets the pixels of the source image into an intermediate integer array;
-     * then writes the array to the JavaFX image using a {@code PixelWriter}.
-     * This method copies pixels in the INT_ARGB format as INT_ARGB pixels
-     * (correct).
+     * Gets the pixels of the source AWT image into an intermediate array; then
+     * writes the array to the JavaFX image using a {@code PixelWriter}. This
+     * method copies pixels in the INT_ARGB format as INT_ARGB pixels (correct).
      *
      * @param awt the source AWT image
      * @param tmp the intermediate array in INT_ARGB pixel format
@@ -548,10 +547,10 @@ public class Benchmarks {
     }
 
     /**
-     * Gets the pixels of the source image into an intermediate integer array;
-     * then writes the array to the JavaFX image using a {@code PixelWriter}.
-     * This method copies pixels in the INT_ARGB format as INT_ARGB_PRE pixels
-     * (wrong alpha).
+     * Gets the pixels of the source AWT image into an intermediate array; then
+     * writes the array to the JavaFX image using a {@code PixelWriter}. This
+     * method copies pixels in the INT_ARGB format as INT_ARGB_PRE pixels (wrong
+     * alpha).
      *
      * @param awt the source AWT image
      * @param tmp the intermediate array in INT_ARGB pixel format
@@ -569,17 +568,19 @@ public class Benchmarks {
 
     /**
      * Converts the AWT image into a JavaFX image using the public JavaFX
-     * utility method {@link SwingFXUtils#toFXImage}.
+     * utility method {@link SwingFXUtils#toFXImage}. This method creates a
+     * JavaFX image with a pixel format of either INT_ARGB or INT_ARGB_PRE,
+     * depending on the source AWT image (correct).
      *
      * @param awt the source AWT image
      * @param jfx the target JavaFX image
      * @param blackhole used to consume the output of the utility method
      */
     @Benchmark
-    public void swingFXUtils(SourceAwtImage awt, TargetJfxImage jfx, Blackhole blackhole) {
+    public void toFXImage(SourceAwtImage awt, TargetJfxImage jfx, Blackhole blackhole) {
         BufferedImage awtImage = awt.frames.get(awt.index);
         blackhole.consume(SwingFXUtils.toFXImage(awtImage, jfx.image));
-        saveImage("swingFXUtils-" + awt.index, jfx.image);
+        saveImage("toFXImage-" + awt.index, jfx.image);
         awt.nextFrame();
     }
 }
