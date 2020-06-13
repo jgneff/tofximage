@@ -1,0 +1,1187 @@
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.forEachOrdered
+
+# Run progress: 0.00% complete, ETA 01:56:40
+# Fork: 1 of 5
+# Warmup Iteration   1: 67.096 ops/s
+# Warmup Iteration   2: 67.793 ops/s
+# Warmup Iteration   3: 67.695 ops/s
+# Warmup Iteration   4: 67.267 ops/s
+# Warmup Iteration   5: 67.660 ops/s
+Iteration   1: 67.820 ops/s
+Iteration   2: 67.823 ops/s
+Iteration   3: 67.836 ops/s
+Iteration   4: 67.701 ops/s
+Iteration   5: 67.624 ops/s
+
+# Run progress: 1.43% complete, ETA 01:59:09
+# Fork: 2 of 5
+# Warmup Iteration   1: 66.184 ops/s
+# Warmup Iteration   2: 67.009 ops/s
+# Warmup Iteration   3: 66.931 ops/s
+# Warmup Iteration   4: 67.051 ops/s
+# Warmup Iteration   5: 67.015 ops/s
+Iteration   1: 66.953 ops/s
+Iteration   2: 66.979 ops/s
+Iteration   3: 66.965 ops/s
+Iteration   4: 66.859 ops/s
+Iteration   5: 66.982 ops/s
+
+# Run progress: 2.86% complete, ETA 01:57:43
+# Fork: 3 of 5
+# Warmup Iteration   1: 64.333 ops/s
+# Warmup Iteration   2: 63.882 ops/s
+# Warmup Iteration   3: 63.910 ops/s
+# Warmup Iteration   4: 63.897 ops/s
+# Warmup Iteration   5: 63.893 ops/s
+Iteration   1: 63.908 ops/s
+Iteration   2: 63.863 ops/s
+Iteration   3: 63.904 ops/s
+Iteration   4: 65.376 ops/s
+Iteration   5: 67.659 ops/s
+
+# Run progress: 4.29% complete, ETA 01:56:01
+# Fork: 4 of 5
+# Warmup Iteration   1: 65.829 ops/s
+# Warmup Iteration   2: 67.486 ops/s
+# Warmup Iteration   3: 67.525 ops/s
+# Warmup Iteration   4: 67.468 ops/s
+# Warmup Iteration   5: 67.428 ops/s
+Iteration   1: 67.468 ops/s
+Iteration   2: 67.500 ops/s
+Iteration   3: 67.447 ops/s
+Iteration   4: 67.495 ops/s
+Iteration   5: 67.408 ops/s
+
+# Run progress: 5.71% complete, ETA 01:54:21
+# Fork: 5 of 5
+# Warmup Iteration   1: 67.239 ops/s
+# Warmup Iteration   2: 67.970 ops/s
+# Warmup Iteration   3: 67.890 ops/s
+# Warmup Iteration   4: 68.015 ops/s
+# Warmup Iteration   5: 67.930 ops/s
+Iteration   1: 67.972 ops/s
+Iteration   2: 67.997 ops/s
+Iteration   3: 67.997 ops/s
+Iteration   4: 67.945 ops/s
+Iteration   5: 67.889 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.forEachOrdered":
+  67.015 ±(99.9%) 0.976 ops/s [Average]
+  (min, avg, max) = (63.863, 67.015, 67.997), stdev = 1.302
+  CI (99.9%): [66.039, 67.990] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.forEachParallel
+
+# Run progress: 7.14% complete, ETA 01:52:40
+# Fork: 1 of 5
+# Warmup Iteration   1: 15.301 ops/s
+# Warmup Iteration   2: 15.031 ops/s
+# Warmup Iteration   3: 15.724 ops/s
+# Warmup Iteration   4: 15.443 ops/s
+# Warmup Iteration   5: 15.071 ops/s
+Iteration   1: 14.894 ops/s
+Iteration   2: 14.979 ops/s
+Iteration   3: 14.893 ops/s
+Iteration   4: 14.845 ops/s
+Iteration   5: 14.968 ops/s
+
+# Run progress: 8.57% complete, ETA 01:50:58
+# Fork: 2 of 5
+# Warmup Iteration   1: 15.494 ops/s
+# Warmup Iteration   2: 15.465 ops/s
+# Warmup Iteration   3: 16.286 ops/s
+# Warmup Iteration   4: 15.981 ops/s
+# Warmup Iteration   5: 16.092 ops/s
+Iteration   1: 16.160 ops/s
+Iteration   2: 15.386 ops/s
+Iteration   3: 15.083 ops/s
+Iteration   4: 15.443 ops/s
+Iteration   5: 15.656 ops/s
+
+# Run progress: 10.00% complete, ETA 01:49:15
+# Fork: 3 of 5
+# Warmup Iteration   1: 14.541 ops/s
+# Warmup Iteration   2: 14.592 ops/s
+# Warmup Iteration   3: 14.170 ops/s
+# Warmup Iteration   4: 14.137 ops/s
+# Warmup Iteration   5: 14.420 ops/s
+Iteration   1: 14.373 ops/s
+Iteration   2: 13.908 ops/s
+Iteration   3: 13.989 ops/s
+Iteration   4: 13.975 ops/s
+Iteration   5: 14.122 ops/s
+
+# Run progress: 11.43% complete, ETA 01:47:33
+# Fork: 4 of 5
+# Warmup Iteration   1: 14.755 ops/s
+# Warmup Iteration   2: 14.567 ops/s
+# Warmup Iteration   3: 15.209 ops/s
+# Warmup Iteration   4: 15.370 ops/s
+# Warmup Iteration   5: 15.163 ops/s
+Iteration   1: 15.045 ops/s
+Iteration   2: 15.412 ops/s
+Iteration   3: 15.377 ops/s
+Iteration   4: 15.228 ops/s
+Iteration   5: 15.083 ops/s
+
+# Run progress: 12.86% complete, ETA 01:45:49
+# Fork: 5 of 5
+# Warmup Iteration   1: 14.696 ops/s
+# Warmup Iteration   2: 14.874 ops/s
+# Warmup Iteration   3: 15.008 ops/s
+# Warmup Iteration   4: 14.535 ops/s
+# Warmup Iteration   5: 14.679 ops/s
+Iteration   1: 14.621 ops/s
+Iteration   2: 14.746 ops/s
+Iteration   3: 14.524 ops/s
+Iteration   4: 14.720 ops/s
+Iteration   5: 14.772 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.forEachParallel":
+  14.888 ±(99.9%) 0.411 ops/s [Average]
+  (min, avg, max) = (13.908, 14.888, 16.160), stdev = 0.549
+  CI (99.9%): [14.477, 15.299] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.forLoopsNested
+
+# Run progress: 14.29% complete, ETA 01:44:07
+# Fork: 1 of 5
+# Warmup Iteration   1: 72.583 ops/s
+# Warmup Iteration   2: 73.202 ops/s
+# Warmup Iteration   3: 73.190 ops/s
+# Warmup Iteration   4: 73.257 ops/s
+# Warmup Iteration   5: 73.272 ops/s
+Iteration   1: 73.230 ops/s
+Iteration   2: 73.262 ops/s
+Iteration   3: 73.230 ops/s
+Iteration   4: 73.268 ops/s
+Iteration   5: 73.262 ops/s
+
+# Run progress: 15.71% complete, ETA 01:42:22
+# Fork: 2 of 5
+# Warmup Iteration   1: 72.585 ops/s
+# Warmup Iteration   2: 73.259 ops/s
+# Warmup Iteration   3: 73.281 ops/s
+# Warmup Iteration   4: 73.292 ops/s
+# Warmup Iteration   5: 73.309 ops/s
+Iteration   1: 73.307 ops/s
+Iteration   2: 73.273 ops/s
+Iteration   3: 73.215 ops/s
+Iteration   4: 73.309 ops/s
+Iteration   5: 73.307 ops/s
+
+# Run progress: 17.14% complete, ETA 01:40:38
+# Fork: 3 of 5
+# Warmup Iteration   1: 72.055 ops/s
+# Warmup Iteration   2: 73.059 ops/s
+# Warmup Iteration   3: 73.144 ops/s
+# Warmup Iteration   4: 73.156 ops/s
+# Warmup Iteration   5: 73.153 ops/s
+Iteration   1: 73.149 ops/s
+Iteration   2: 73.144 ops/s
+Iteration   3: 73.138 ops/s
+Iteration   4: 73.130 ops/s
+Iteration   5: 73.140 ops/s
+
+# Run progress: 18.57% complete, ETA 01:38:53
+# Fork: 4 of 5
+# Warmup Iteration   1: 72.262 ops/s
+# Warmup Iteration   2: 72.927 ops/s
+# Warmup Iteration   3: 73.061 ops/s
+# Warmup Iteration   4: 73.070 ops/s
+# Warmup Iteration   5: 73.053 ops/s
+Iteration   1: 73.032 ops/s
+Iteration   2: 73.003 ops/s
+Iteration   3: 73.050 ops/s
+Iteration   4: 73.063 ops/s
+Iteration   5: 73.045 ops/s
+
+# Run progress: 20.00% complete, ETA 01:37:07
+# Fork: 5 of 5
+# Warmup Iteration   1: 72.351 ops/s
+# Warmup Iteration   2: 73.147 ops/s
+# Warmup Iteration   3: 73.158 ops/s
+# Warmup Iteration   4: 73.164 ops/s
+# Warmup Iteration   5: 73.139 ops/s
+Iteration   1: 73.152 ops/s
+Iteration   2: 73.058 ops/s
+Iteration   3: 73.076 ops/s
+Iteration   4: 73.140 ops/s
+Iteration   5: 73.106 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.forLoopsNested":
+  73.164 ±(99.9%) 0.072 ops/s [Average]
+  (min, avg, max) = (73.003, 73.164, 73.309), stdev = 0.096
+  CI (99.9%): [73.092, 73.236] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.putArgbPreIntoBytes
+
+# Run progress: 21.43% complete, ETA 01:35:23
+# Fork: 1 of 5
+# Warmup Iteration   1: 337.519 ops/s
+# Warmup Iteration   2: 338.170 ops/s
+# Warmup Iteration   3: 338.435 ops/s
+# Warmup Iteration   4: 338.457 ops/s
+# Warmup Iteration   5: 338.272 ops/s
+Iteration   1: 338.450 ops/s
+Iteration   2: 338.228 ops/s
+Iteration   3: 338.265 ops/s
+Iteration   4: 338.252 ops/s
+Iteration   5: 338.306 ops/s
+
+# Run progress: 22.86% complete, ETA 01:33:45
+# Fork: 2 of 5
+# Warmup Iteration   1: 337.568 ops/s
+# Warmup Iteration   2: 338.031 ops/s
+# Warmup Iteration   3: 338.307 ops/s
+# Warmup Iteration   4: 338.399 ops/s
+# Warmup Iteration   5: 338.428 ops/s
+Iteration   1: 338.368 ops/s
+Iteration   2: 338.363 ops/s
+Iteration   3: 338.381 ops/s
+Iteration   4: 338.332 ops/s
+Iteration   5: 338.351 ops/s
+
+# Run progress: 24.29% complete, ETA 01:32:07
+# Fork: 3 of 5
+# Warmup Iteration   1: 337.641 ops/s
+# Warmup Iteration   2: 338.119 ops/s
+# Warmup Iteration   3: 338.389 ops/s
+# Warmup Iteration   4: 338.500 ops/s
+# Warmup Iteration   5: 338.557 ops/s
+Iteration   1: 338.506 ops/s
+Iteration   2: 338.423 ops/s
+Iteration   3: 338.446 ops/s
+Iteration   4: 338.392 ops/s
+Iteration   5: 338.480 ops/s
+
+# Run progress: 25.71% complete, ETA 01:30:28
+# Fork: 4 of 5
+# Warmup Iteration   1: 337.954 ops/s
+# Warmup Iteration   2: 338.359 ops/s
+# Warmup Iteration   3: 338.616 ops/s
+# Warmup Iteration   4: 338.675 ops/s
+# Warmup Iteration   5: 338.804 ops/s
+Iteration   1: 338.643 ops/s
+Iteration   2: 338.843 ops/s
+Iteration   3: 338.828 ops/s
+Iteration   4: 338.822 ops/s
+Iteration   5: 338.691 ops/s
+
+# Run progress: 27.14% complete, ETA 01:28:47
+# Fork: 5 of 5
+# Warmup Iteration   1: 337.701 ops/s
+# Warmup Iteration   2: 338.175 ops/s
+# Warmup Iteration   3: 338.445 ops/s
+# Warmup Iteration   4: 338.459 ops/s
+# Warmup Iteration   5: 338.426 ops/s
+Iteration   1: 338.475 ops/s
+Iteration   2: 338.437 ops/s
+Iteration   3: 338.465 ops/s
+Iteration   4: 338.478 ops/s
+Iteration   5: 338.476 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.putArgbPreIntoBytes":
+  338.468 ±(99.9%) 0.130 ops/s [Average]
+  (min, avg, max) = (338.228, 338.468, 338.843), stdev = 0.173
+  CI (99.9%): [338.338, 338.598] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.putArgbPreIntoInts
+
+# Run progress: 28.57% complete, ETA 01:27:04
+# Fork: 1 of 5
+# Warmup Iteration   1: 337.892 ops/s
+# Warmup Iteration   2: 338.348 ops/s
+# Warmup Iteration   3: 338.560 ops/s
+# Warmup Iteration   4: 338.419 ops/s
+# Warmup Iteration   5: 338.409 ops/s
+Iteration   1: 338.435 ops/s
+Iteration   2: 338.434 ops/s
+Iteration   3: 338.407 ops/s
+Iteration   4: 338.589 ops/s
+Iteration   5: 338.586 ops/s
+
+# Run progress: 30.00% complete, ETA 01:25:23
+# Fork: 2 of 5
+# Warmup Iteration   1: 337.792 ops/s
+# Warmup Iteration   2: 338.198 ops/s
+# Warmup Iteration   3: 338.548 ops/s
+# Warmup Iteration   4: 338.408 ops/s
+# Warmup Iteration   5: 338.438 ops/s
+Iteration   1: 338.426 ops/s
+Iteration   2: 338.537 ops/s
+Iteration   3: 338.570 ops/s
+Iteration   4: 338.556 ops/s
+Iteration   5: 338.542 ops/s
+
+# Run progress: 31.43% complete, ETA 01:23:42
+# Fork: 3 of 5
+# Warmup Iteration   1: 337.690 ops/s
+# Warmup Iteration   2: 338.053 ops/s
+# Warmup Iteration   3: 338.261 ops/s
+# Warmup Iteration   4: 338.248 ops/s
+# Warmup Iteration   5: 338.207 ops/s
+Iteration   1: 338.298 ops/s
+Iteration   2: 338.445 ops/s
+Iteration   3: 338.438 ops/s
+Iteration   4: 338.440 ops/s
+Iteration   5: 338.297 ops/s
+
+# Run progress: 32.86% complete, ETA 01:21:59
+# Fork: 4 of 5
+# Warmup Iteration   1: 337.766 ops/s
+# Warmup Iteration   2: 338.075 ops/s
+# Warmup Iteration   3: 338.171 ops/s
+# Warmup Iteration   4: 338.262 ops/s
+# Warmup Iteration   5: 338.254 ops/s
+Iteration   1: 338.251 ops/s
+Iteration   2: 338.258 ops/s
+Iteration   3: 338.270 ops/s
+Iteration   4: 338.277 ops/s
+Iteration   5: 338.267 ops/s
+
+# Run progress: 34.29% complete, ETA 01:20:17
+# Fork: 5 of 5
+# Warmup Iteration   1: 337.952 ops/s
+# Warmup Iteration   2: 338.478 ops/s
+# Warmup Iteration   3: 338.660 ops/s
+# Warmup Iteration   4: 338.686 ops/s
+# Warmup Iteration   5: 338.526 ops/s
+Iteration   1: 338.505 ops/s
+Iteration   2: 338.505 ops/s
+Iteration   3: 338.481 ops/s
+Iteration   4: 338.699 ops/s
+Iteration   5: 338.696 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.putArgbPreIntoInts":
+  338.448 ±(99.9%) 0.100 ops/s [Average]
+  (min, avg, max) = (338.251, 338.448, 338.699), stdev = 0.134
+  CI (99.9%): [338.348, 338.549] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.putArrayIntoBytes
+
+# Run progress: 35.71% complete, ETA 01:18:33
+# Fork: 1 of 5
+# Warmup Iteration   1: 496.131 ops/s
+# Warmup Iteration   2: 497.923 ops/s
+# Warmup Iteration   3: 498.365 ops/s
+# Warmup Iteration   4: 498.362 ops/s
+# Warmup Iteration   5: 498.155 ops/s
+Iteration   1: 498.401 ops/s
+Iteration   2: 498.064 ops/s
+Iteration   3: 498.407 ops/s
+Iteration   4: 498.394 ops/s
+Iteration   5: 498.371 ops/s
+
+# Run progress: 37.14% complete, ETA 01:16:50
+# Fork: 2 of 5
+# Warmup Iteration   1: 495.901 ops/s
+# Warmup Iteration   2: 498.194 ops/s
+# Warmup Iteration   3: 498.358 ops/s
+# Warmup Iteration   4: 498.238 ops/s
+# Warmup Iteration   5: 498.354 ops/s
+Iteration   1: 498.178 ops/s
+Iteration   2: 498.404 ops/s
+Iteration   3: 498.336 ops/s
+Iteration   4: 498.510 ops/s
+Iteration   5: 498.389 ops/s
+
+# Run progress: 38.57% complete, ETA 01:15:06
+# Fork: 3 of 5
+# Warmup Iteration   1: 495.966 ops/s
+# Warmup Iteration   2: 498.022 ops/s
+# Warmup Iteration   3: 498.090 ops/s
+# Warmup Iteration   4: 498.360 ops/s
+# Warmup Iteration   5: 498.362 ops/s
+Iteration   1: 498.313 ops/s
+Iteration   2: 498.366 ops/s
+Iteration   3: 498.350 ops/s
+Iteration   4: 498.294 ops/s
+Iteration   5: 498.167 ops/s
+
+# Run progress: 40.00% complete, ETA 01:13:23
+# Fork: 4 of 5
+# Warmup Iteration   1: 495.920 ops/s
+# Warmup Iteration   2: 498.154 ops/s
+# Warmup Iteration   3: 498.426 ops/s
+# Warmup Iteration   4: 498.535 ops/s
+# Warmup Iteration   5: 498.418 ops/s
+Iteration   1: 498.108 ops/s
+Iteration   2: 498.450 ops/s
+Iteration   3: 498.353 ops/s
+Iteration   4: 498.390 ops/s
+Iteration   5: 498.551 ops/s
+
+# Run progress: 41.43% complete, ETA 01:11:39
+# Fork: 5 of 5
+# Warmup Iteration   1: 495.854 ops/s
+# Warmup Iteration   2: 498.031 ops/s
+# Warmup Iteration   3: 498.431 ops/s
+# Warmup Iteration   4: 498.438 ops/s
+# Warmup Iteration   5: 498.475 ops/s
+Iteration   1: 498.481 ops/s
+Iteration   2: 498.630 ops/s
+Iteration   3: 498.635 ops/s
+Iteration   4: 498.586 ops/s
+Iteration   5: 498.487 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.putArrayIntoBytes":
+  498.385 ±(99.9%) 0.110 ops/s [Average]
+  (min, avg, max) = (498.064, 498.385, 498.635), stdev = 0.147
+  CI (99.9%): [498.274, 498.495] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.putDirectIntoInts
+
+# Run progress: 42.86% complete, ETA 01:09:56
+# Fork: 1 of 5
+# Warmup Iteration   1: 524.264 ops/s
+# Warmup Iteration   2: 526.569 ops/s
+# Warmup Iteration   3: 526.844 ops/s
+# Warmup Iteration   4: 526.876 ops/s
+# Warmup Iteration   5: 526.883 ops/s
+Iteration   1: 526.874 ops/s
+Iteration   2: 526.859 ops/s
+Iteration   3: 526.871 ops/s
+Iteration   4: 526.732 ops/s
+Iteration   5: 526.866 ops/s
+
+# Run progress: 44.29% complete, ETA 01:08:10
+# Fork: 2 of 5
+# Warmup Iteration   1: 524.529 ops/s
+# Warmup Iteration   2: 526.811 ops/s
+# Warmup Iteration   3: 526.367 ops/s
+# Warmup Iteration   4: 526.940 ops/s
+# Warmup Iteration   5: 526.911 ops/s
+Iteration   1: 526.743 ops/s
+Iteration   2: 526.821 ops/s
+Iteration   3: 526.772 ops/s
+Iteration   4: 526.770 ops/s
+Iteration   5: 526.928 ops/s
+
+# Run progress: 45.71% complete, ETA 01:06:24
+# Fork: 3 of 5
+# Warmup Iteration   1: 524.554 ops/s
+# Warmup Iteration   2: 526.586 ops/s
+# Warmup Iteration   3: 526.462 ops/s
+# Warmup Iteration   4: 526.618 ops/s
+# Warmup Iteration   5: 526.695 ops/s
+Iteration   1: 526.751 ops/s
+Iteration   2: 526.917 ops/s
+Iteration   3: 526.929 ops/s
+Iteration   4: 526.930 ops/s
+Iteration   5: 526.879 ops/s
+
+# Run progress: 47.14% complete, ETA 01:04:38
+# Fork: 4 of 5
+# Warmup Iteration   1: 525.204 ops/s
+# Warmup Iteration   2: 525.663 ops/s
+# Warmup Iteration   3: 526.728 ops/s
+# Warmup Iteration   4: 526.494 ops/s
+# Warmup Iteration   5: 526.779 ops/s
+Iteration   1: 526.741 ops/s
+Iteration   2: 526.685 ops/s
+Iteration   3: 526.743 ops/s
+Iteration   4: 526.803 ops/s
+Iteration   5: 526.928 ops/s
+
+# Run progress: 48.57% complete, ETA 01:02:52
+# Fork: 5 of 5
+# Warmup Iteration   1: 524.421 ops/s
+# Warmup Iteration   2: 526.704 ops/s
+# Warmup Iteration   3: 526.792 ops/s
+# Warmup Iteration   4: 526.553 ops/s
+# Warmup Iteration   5: 526.064 ops/s
+Iteration   1: 526.830 ops/s
+Iteration   2: 526.851 ops/s
+Iteration   3: 526.860 ops/s
+Iteration   4: 526.853 ops/s
+Iteration   5: 526.668 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.putDirectIntoInts":
+  526.824 ±(99.9%) 0.059 ops/s [Average]
+  (min, avg, max) = (526.668, 526.824, 526.930), stdev = 0.079
+  CI (99.9%): [526.765, 526.883] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArgbAsArgb
+
+# Run progress: 50.00% complete, ETA 01:01:06
+# Fork: 1 of 5
+# Warmup Iteration   1: 689.653 ops/s
+# Warmup Iteration   2: 745.435 ops/s
+# Warmup Iteration   3: 745.402 ops/s
+# Warmup Iteration   4: 745.442 ops/s
+# Warmup Iteration   5: 745.446 ops/s
+Iteration   1: 745.479 ops/s
+Iteration   2: 745.049 ops/s
+Iteration   3: 745.124 ops/s
+Iteration   4: 590.265 ops/s
+Iteration   5: 523.228 ops/s
+
+# Run progress: 51.43% complete, ETA 00:59:23
+# Fork: 2 of 5
+# Warmup Iteration   1: 689.479 ops/s
+# Warmup Iteration   2: 745.004 ops/s
+# Warmup Iteration   3: 745.513 ops/s
+# Warmup Iteration   4: 745.227 ops/s
+# Warmup Iteration   5: 745.513 ops/s
+Iteration   1: 745.294 ops/s
+Iteration   2: 745.250 ops/s
+Iteration   3: 745.254 ops/s
+Iteration   4: 590.083 ops/s
+Iteration   5: 522.766 ops/s
+
+# Run progress: 52.86% complete, ETA 00:57:39
+# Fork: 3 of 5
+# Warmup Iteration   1: 689.413 ops/s
+# Warmup Iteration   2: 745.304 ops/s
+# Warmup Iteration   3: 745.356 ops/s
+# Warmup Iteration   4: 745.358 ops/s
+# Warmup Iteration   5: 745.367 ops/s
+Iteration   1: 745.384 ops/s
+Iteration   2: 745.384 ops/s
+Iteration   3: 745.435 ops/s
+Iteration   4: 590.058 ops/s
+Iteration   5: 522.423 ops/s
+
+# Run progress: 54.29% complete, ETA 00:55:55
+# Fork: 4 of 5
+# Warmup Iteration   1: 689.430 ops/s
+# Warmup Iteration   2: 745.446 ops/s
+# Warmup Iteration   3: 745.607 ops/s
+# Warmup Iteration   4: 745.391 ops/s
+# Warmup Iteration   5: 745.516 ops/s
+Iteration   1: 745.602 ops/s
+Iteration   2: 745.090 ops/s
+Iteration   3: 745.227 ops/s
+Iteration   4: 589.719 ops/s
+Iteration   5: 522.497 ops/s
+
+# Run progress: 55.71% complete, ETA 00:54:11
+# Fork: 5 of 5
+# Warmup Iteration   1: 689.691 ops/s
+# Warmup Iteration   2: 745.070 ops/s
+# Warmup Iteration   3: 745.466 ops/s
+# Warmup Iteration   4: 745.431 ops/s
+# Warmup Iteration   5: 745.409 ops/s
+Iteration   1: 745.009 ops/s
+Iteration   2: 745.397 ops/s
+Iteration   3: 745.460 ops/s
+Iteration   4: 590.143 ops/s
+Iteration   5: 525.662 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArgbAsArgb":
+  669.851 ±(99.9%) 72.463 ops/s [Average]
+  (min, avg, max) = (522.423, 669.851, 745.602), stdev = 96.736
+  CI (99.9%): [597.388, 742.314] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArgbAsArgbPre
+
+# Run progress: 57.14% complete, ETA 00:52:27
+# Fork: 1 of 5
+# Warmup Iteration   1: 795.896 ops/s
+# Warmup Iteration   2: 908.413 ops/s
+# Warmup Iteration   3: 908.474 ops/s
+# Warmup Iteration   4: 908.456 ops/s
+# Warmup Iteration   5: 908.670 ops/s
+Iteration   1: 908.673 ops/s
+Iteration   2: 891.570 ops/s
+Iteration   3: 625.049 ops/s
+Iteration   4: 623.150 ops/s
+Iteration   5: 623.139 ops/s
+
+# Run progress: 58.57% complete, ETA 00:50:42
+# Fork: 2 of 5
+# Warmup Iteration   1: 795.535 ops/s
+# Warmup Iteration   2: 908.493 ops/s
+# Warmup Iteration   3: 908.405 ops/s
+# Warmup Iteration   4: 908.542 ops/s
+# Warmup Iteration   5: 908.444 ops/s
+Iteration   1: 908.368 ops/s
+Iteration   2: 891.718 ops/s
+Iteration   3: 625.295 ops/s
+Iteration   4: 623.143 ops/s
+Iteration   5: 623.167 ops/s
+
+# Run progress: 60.00% complete, ETA 00:48:58
+# Fork: 3 of 5
+# Warmup Iteration   1: 795.816 ops/s
+# Warmup Iteration   2: 908.499 ops/s
+# Warmup Iteration   3: 908.493 ops/s
+# Warmup Iteration   4: 908.642 ops/s
+# Warmup Iteration   5: 908.469 ops/s
+Iteration   1: 908.486 ops/s
+Iteration   2: 891.764 ops/s
+Iteration   3: 625.183 ops/s
+Iteration   4: 623.188 ops/s
+Iteration   5: 623.180 ops/s
+
+# Run progress: 61.43% complete, ETA 00:47:14
+# Fork: 4 of 5
+# Warmup Iteration   1: 795.329 ops/s
+# Warmup Iteration   2: 908.470 ops/s
+# Warmup Iteration   3: 908.564 ops/s
+# Warmup Iteration   4: 908.493 ops/s
+# Warmup Iteration   5: 908.734 ops/s
+Iteration   1: 908.779 ops/s
+Iteration   2: 891.712 ops/s
+Iteration   3: 625.206 ops/s
+Iteration   4: 623.182 ops/s
+Iteration   5: 623.149 ops/s
+
+# Run progress: 62.86% complete, ETA 00:45:29
+# Fork: 5 of 5
+# Warmup Iteration   1: 795.635 ops/s
+# Warmup Iteration   2: 908.458 ops/s
+# Warmup Iteration   3: 908.538 ops/s
+# Warmup Iteration   4: 908.604 ops/s
+# Warmup Iteration   5: 908.576 ops/s
+Iteration   1: 908.461 ops/s
+Iteration   2: 891.728 ops/s
+Iteration   3: 625.331 ops/s
+Iteration   4: 623.319 ops/s
+Iteration   5: 623.303 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArgbAsArgbPre":
+  734.370 ±(99.9%) 103.552 ops/s [Average]
+  (min, avg, max) = (623.139, 734.370, 908.779), stdev = 138.239
+  CI (99.9%): [630.818, 837.922] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArgbPreAsArgb
+
+# Run progress: 64.29% complete, ETA 00:43:45
+# Fork: 1 of 5
+# Warmup Iteration   1: 257.629 ops/s
+# Warmup Iteration   2: 258.345 ops/s
+# Warmup Iteration   3: 264.764 ops/s
+# Warmup Iteration   4: 265.963 ops/s
+# Warmup Iteration   5: 265.989 ops/s
+Iteration   1: 266.015 ops/s
+Iteration   2: 265.986 ops/s
+Iteration   3: 265.936 ops/s
+Iteration   4: 265.953 ops/s
+Iteration   5: 266.058 ops/s
+
+# Run progress: 65.71% complete, ETA 00:42:00
+# Fork: 2 of 5
+# Warmup Iteration   1: 257.697 ops/s
+# Warmup Iteration   2: 258.325 ops/s
+# Warmup Iteration   3: 264.809 ops/s
+# Warmup Iteration   4: 265.971 ops/s
+# Warmup Iteration   5: 266.121 ops/s
+Iteration   1: 266.107 ops/s
+Iteration   2: 265.991 ops/s
+Iteration   3: 265.971 ops/s
+Iteration   4: 265.962 ops/s
+Iteration   5: 265.992 ops/s
+
+# Run progress: 67.14% complete, ETA 00:40:16
+# Fork: 3 of 5
+# Warmup Iteration   1: 257.623 ops/s
+# Warmup Iteration   2: 258.372 ops/s
+# Warmup Iteration   3: 264.820 ops/s
+# Warmup Iteration   4: 266.005 ops/s
+# Warmup Iteration   5: 265.924 ops/s
+Iteration   1: 265.910 ops/s
+Iteration   2: 265.924 ops/s
+Iteration   3: 265.912 ops/s
+Iteration   4: 265.933 ops/s
+Iteration   5: 265.924 ops/s
+
+# Run progress: 68.57% complete, ETA 00:38:31
+# Fork: 4 of 5
+# Warmup Iteration   1: 257.700 ops/s
+# Warmup Iteration   2: 258.362 ops/s
+# Warmup Iteration   3: 264.845 ops/s
+# Warmup Iteration   4: 266.009 ops/s
+# Warmup Iteration   5: 265.971 ops/s
+Iteration   1: 266.010 ops/s
+Iteration   2: 265.985 ops/s
+Iteration   3: 266.020 ops/s
+Iteration   4: 266.016 ops/s
+Iteration   5: 266.018 ops/s
+
+# Run progress: 70.00% complete, ETA 00:36:46
+# Fork: 5 of 5
+# Warmup Iteration   1: 257.666 ops/s
+# Warmup Iteration   2: 258.427 ops/s
+# Warmup Iteration   3: 264.880 ops/s
+# Warmup Iteration   4: 266.074 ops/s
+# Warmup Iteration   5: 265.999 ops/s
+Iteration   1: 266.086 ops/s
+Iteration   2: 265.994 ops/s
+Iteration   3: 265.964 ops/s
+Iteration   4: 265.978 ops/s
+Iteration   5: 265.977 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArgbPreAsArgb":
+  265.985 ±(99.9%) 0.038 ops/s [Average]
+  (min, avg, max) = (265.910, 265.985, 266.107), stdev = 0.050
+  CI (99.9%): [265.947, 266.023] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArgbPreAsArgbPre
+
+# Run progress: 71.43% complete, ETA 00:35:01
+# Fork: 1 of 5
+# Warmup Iteration   1: 267.883 ops/s
+# Warmup Iteration   2: 268.677 ops/s
+# Warmup Iteration   3: 284.341 ops/s
+# Warmup Iteration   4: 285.433 ops/s
+# Warmup Iteration   5: 285.398 ops/s
+Iteration   1: 285.460 ops/s
+Iteration   2: 285.403 ops/s
+Iteration   3: 285.440 ops/s
+Iteration   4: 285.425 ops/s
+Iteration   5: 285.430 ops/s
+
+# Run progress: 72.86% complete, ETA 00:33:16
+# Fork: 2 of 5
+# Warmup Iteration   1: 267.600 ops/s
+# Warmup Iteration   2: 268.459 ops/s
+# Warmup Iteration   3: 283.974 ops/s
+# Warmup Iteration   4: 285.028 ops/s
+# Warmup Iteration   5: 285.151 ops/s
+Iteration   1: 285.168 ops/s
+Iteration   2: 285.030 ops/s
+Iteration   3: 285.093 ops/s
+Iteration   4: 285.082 ops/s
+Iteration   5: 285.111 ops/s
+
+# Run progress: 74.29% complete, ETA 00:31:31
+# Fork: 3 of 5
+# Warmup Iteration   1: 267.917 ops/s
+# Warmup Iteration   2: 268.718 ops/s
+# Warmup Iteration   3: 284.338 ops/s
+# Warmup Iteration   4: 285.424 ops/s
+# Warmup Iteration   5: 285.445 ops/s
+Iteration   1: 285.462 ops/s
+Iteration   2: 285.442 ops/s
+Iteration   3: 285.475 ops/s
+Iteration   4: 285.458 ops/s
+Iteration   5: 285.405 ops/s
+
+# Run progress: 75.71% complete, ETA 00:29:46
+# Fork: 4 of 5
+# Warmup Iteration   1: 267.875 ops/s
+# Warmup Iteration   2: 268.705 ops/s
+# Warmup Iteration   3: 284.335 ops/s
+# Warmup Iteration   4: 285.426 ops/s
+# Warmup Iteration   5: 285.372 ops/s
+Iteration   1: 285.428 ops/s
+Iteration   2: 285.413 ops/s
+Iteration   3: 285.383 ops/s
+Iteration   4: 285.419 ops/s
+Iteration   5: 285.537 ops/s
+
+# Run progress: 77.14% complete, ETA 00:28:02
+# Fork: 5 of 5
+# Warmup Iteration   1: 267.898 ops/s
+# Warmup Iteration   2: 268.848 ops/s
+# Warmup Iteration   3: 284.400 ops/s
+# Warmup Iteration   4: 285.447 ops/s
+# Warmup Iteration   5: 285.516 ops/s
+Iteration   1: 285.421 ops/s
+Iteration   2: 285.439 ops/s
+Iteration   3: 285.507 ops/s
+Iteration   4: 285.453 ops/s
+Iteration   5: 285.457 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArgbPreAsArgbPre":
+  285.374 ±(99.9%) 0.110 ops/s [Average]
+  (min, avg, max) = (285.030, 285.374, 285.537), stdev = 0.146
+  CI (99.9%): [285.264, 285.483] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArrayAsArgb
+
+# Run progress: 78.57% complete, ETA 00:26:17
+# Fork: 1 of 5
+# Warmup Iteration   1: 355.318 ops/s
+# Warmup Iteration   2: 325.469 ops/s
+# Warmup Iteration   3: 287.701 ops/s
+# Warmup Iteration   4: 287.484 ops/s
+# Warmup Iteration   5: 287.691 ops/s
+Iteration   1: 287.591 ops/s
+Iteration   2: 287.674 ops/s
+Iteration   3: 287.589 ops/s
+Iteration   4: 287.649 ops/s
+Iteration   5: 287.579 ops/s
+
+# Run progress: 80.00% complete, ETA 00:24:32
+# Fork: 2 of 5
+# Warmup Iteration   1: 355.465 ops/s
+# Warmup Iteration   2: 325.490 ops/s
+# Warmup Iteration   3: 287.647 ops/s
+# Warmup Iteration   4: 287.649 ops/s
+# Warmup Iteration   5: 287.722 ops/s
+Iteration   1: 287.593 ops/s
+Iteration   2: 287.735 ops/s
+Iteration   3: 287.691 ops/s
+Iteration   4: 287.774 ops/s
+Iteration   5: 287.747 ops/s
+
+# Run progress: 81.43% complete, ETA 00:22:47
+# Fork: 3 of 5
+# Warmup Iteration   1: 355.356 ops/s
+# Warmup Iteration   2: 325.468 ops/s
+# Warmup Iteration   3: 287.233 ops/s
+# Warmup Iteration   4: 287.253 ops/s
+# Warmup Iteration   5: 287.234 ops/s
+Iteration   1: 287.215 ops/s
+Iteration   2: 287.324 ops/s
+Iteration   3: 287.258 ops/s
+Iteration   4: 287.321 ops/s
+Iteration   5: 287.253 ops/s
+
+# Run progress: 82.86% complete, ETA 00:21:02
+# Fork: 4 of 5
+# Warmup Iteration   1: 339.911 ops/s
+# Warmup Iteration   2: 320.554 ops/s
+# Warmup Iteration   3: 287.487 ops/s
+# Warmup Iteration   4: 287.540 ops/s
+# Warmup Iteration   5: 287.504 ops/s
+Iteration   1: 287.501 ops/s
+Iteration   2: 287.418 ops/s
+Iteration   3: 287.501 ops/s
+Iteration   4: 287.465 ops/s
+Iteration   5: 287.603 ops/s
+
+# Run progress: 84.29% complete, ETA 00:19:17
+# Fork: 5 of 5
+# Warmup Iteration   1: 355.481 ops/s
+# Warmup Iteration   2: 325.346 ops/s
+# Warmup Iteration   3: 287.623 ops/s
+# Warmup Iteration   4: 287.639 ops/s
+# Warmup Iteration   5: 287.648 ops/s
+Iteration   1: 287.592 ops/s
+Iteration   2: 287.737 ops/s
+Iteration   3: 287.667 ops/s
+Iteration   4: 287.772 ops/s
+Iteration   5: 287.714 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArrayAsArgb":
+  287.558 ±(99.9%) 0.130 ops/s [Average]
+  (min, avg, max) = (287.215, 287.558, 287.774), stdev = 0.173
+  CI (99.9%): [287.429, 287.688] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArrayAsArgbPre
+
+# Run progress: 85.71% complete, ETA 00:17:31
+# Fork: 1 of 5
+# Warmup Iteration   1: 358.547 ops/s
+# Warmup Iteration   2: 344.389 ops/s
+# Warmup Iteration   3: 326.289 ops/s
+# Warmup Iteration   4: 326.315 ops/s
+# Warmup Iteration   5: 326.327 ops/s
+Iteration   1: 326.286 ops/s
+Iteration   2: 326.247 ops/s
+Iteration   3: 326.222 ops/s
+Iteration   4: 326.267 ops/s
+Iteration   5: 326.260 ops/s
+
+# Run progress: 87.14% complete, ETA 00:15:46
+# Fork: 2 of 5
+# Warmup Iteration   1: 358.650 ops/s
+# Warmup Iteration   2: 344.448 ops/s
+# Warmup Iteration   3: 326.356 ops/s
+# Warmup Iteration   4: 326.322 ops/s
+# Warmup Iteration   5: 326.272 ops/s
+Iteration   1: 326.244 ops/s
+Iteration   2: 326.270 ops/s
+Iteration   3: 326.250 ops/s
+Iteration   4: 326.299 ops/s
+Iteration   5: 326.281 ops/s
+
+# Run progress: 88.57% complete, ETA 00:14:01
+# Fork: 3 of 5
+# Warmup Iteration   1: 358.861 ops/s
+# Warmup Iteration   2: 344.408 ops/s
+# Warmup Iteration   3: 326.307 ops/s
+# Warmup Iteration   4: 326.342 ops/s
+# Warmup Iteration   5: 326.361 ops/s
+Iteration   1: 326.382 ops/s
+Iteration   2: 326.241 ops/s
+Iteration   3: 326.211 ops/s
+Iteration   4: 326.254 ops/s
+Iteration   5: 326.237 ops/s
+
+# Run progress: 90.00% complete, ETA 00:12:16
+# Fork: 4 of 5
+# Warmup Iteration   1: 358.878 ops/s
+# Warmup Iteration   2: 344.368 ops/s
+# Warmup Iteration   3: 326.087 ops/s
+# Warmup Iteration   4: 325.957 ops/s
+# Warmup Iteration   5: 326.338 ops/s
+Iteration   1: 326.369 ops/s
+Iteration   2: 326.362 ops/s
+Iteration   3: 326.378 ops/s
+Iteration   4: 326.351 ops/s
+Iteration   5: 326.342 ops/s
+
+# Run progress: 91.43% complete, ETA 00:10:31
+# Fork: 5 of 5
+# Warmup Iteration   1: 358.503 ops/s
+# Warmup Iteration   2: 344.337 ops/s
+# Warmup Iteration   3: 326.272 ops/s
+# Warmup Iteration   4: 326.297 ops/s
+# Warmup Iteration   5: 326.322 ops/s
+Iteration   1: 326.313 ops/s
+Iteration   2: 326.216 ops/s
+Iteration   3: 326.201 ops/s
+Iteration   4: 326.203 ops/s
+Iteration   5: 326.231 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArrayAsArgbPre":
+  326.277 ±(99.9%) 0.043 ops/s [Average]
+  (min, avg, max) = (326.201, 326.277, 326.382), stdev = 0.057
+  CI (99.9%): [326.234, 326.320] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK 64-Bit Server VM, 11.0.7+10-post-Ubuntu-3ubuntu1
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/javafx-sdk-15/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.toFXImage
+
+# Run progress: 92.86% complete, ETA 00:08:46
+# Fork: 1 of 5
+# Warmup Iteration   1: 252.160 ops/s
+# Warmup Iteration   2: 255.736 ops/s
+# Warmup Iteration   3: 244.761 ops/s
+# Warmup Iteration   4: 243.861 ops/s
+# Warmup Iteration   5: 243.264 ops/s
+Iteration   1: 243.608 ops/s
+Iteration   2: 243.761 ops/s
+Iteration   3: 243.641 ops/s
+Iteration   4: 243.552 ops/s
+Iteration   5: 242.939 ops/s
+
+# Run progress: 94.29% complete, ETA 00:07:00
+# Fork: 2 of 5
+# Warmup Iteration   1: 252.264 ops/s
+# Warmup Iteration   2: 255.012 ops/s
+# Warmup Iteration   3: 245.101 ops/s
+# Warmup Iteration   4: 243.333 ops/s
+# Warmup Iteration   5: 243.210 ops/s
+Iteration   1: 243.723 ops/s
+Iteration   2: 243.398 ops/s
+Iteration   3: 243.418 ops/s
+Iteration   4: 242.735 ops/s
+Iteration   5: 243.414 ops/s
+
+# Run progress: 95.71% complete, ETA 00:05:15
+# Fork: 3 of 5
+# Warmup Iteration   1: 252.446 ops/s
+# Warmup Iteration   2: 255.379 ops/s
+# Warmup Iteration   3: 245.114 ops/s
+# Warmup Iteration   4: 243.102 ops/s
+# Warmup Iteration   5: 243.012 ops/s
+Iteration   1: 242.659 ops/s
+Iteration   2: 242.979 ops/s
+Iteration   3: 243.177 ops/s
+Iteration   4: 242.740 ops/s
+Iteration   5: 243.174 ops/s
+
+# Run progress: 97.14% complete, ETA 00:03:30
+# Fork: 4 of 5
+# Warmup Iteration   1: 252.423 ops/s
+# Warmup Iteration   2: 255.439 ops/s
+# Warmup Iteration   3: 245.282 ops/s
+# Warmup Iteration   4: 243.783 ops/s
+# Warmup Iteration   5: 242.640 ops/s
+Iteration   1: 243.213 ops/s
+Iteration   2: 242.596 ops/s
+Iteration   3: 243.394 ops/s
+Iteration   4: 243.331 ops/s
+Iteration   5: 243.598 ops/s
+
+# Run progress: 98.57% complete, ETA 00:01:45
+# Fork: 5 of 5
+# Warmup Iteration   1: 252.747 ops/s
+# Warmup Iteration   2: 255.898 ops/s
+# Warmup Iteration   3: 244.591 ops/s
+# Warmup Iteration   4: 243.475 ops/s
+# Warmup Iteration   5: 243.354 ops/s
+Iteration   1: 243.424 ops/s
+Iteration   2: 243.488 ops/s
+Iteration   3: 243.450 ops/s
+Iteration   4: 243.135 ops/s
+Iteration   5: 243.489 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.toFXImage":
+  243.281 ±(99.9%) 0.253 ops/s [Average]
+  (min, avg, max) = (242.596, 243.281, 243.761), stdev = 0.338
+  CI (99.9%): [243.028, 243.535] (assumes normal distribution)
+
+
+# Run complete. Total time: 02:02:39
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                        Mode  Cnt    Score     Error  Units
+Benchmarks.forEachOrdered       thrpt   25   67.015 ±   0.976  ops/s
+Benchmarks.forEachParallel      thrpt   25   14.888 ±   0.411  ops/s
+Benchmarks.forLoopsNested       thrpt   25   73.164 ±   0.072  ops/s
+Benchmarks.putArgbPreIntoBytes  thrpt   25  338.468 ±   0.130  ops/s
+Benchmarks.putArgbPreIntoInts   thrpt   25  338.448 ±   0.100  ops/s
+Benchmarks.putArrayIntoBytes    thrpt   25  498.385 ±   0.110  ops/s
+Benchmarks.putDirectIntoInts    thrpt   25  526.824 ±   0.059  ops/s
+Benchmarks.setArgbAsArgb        thrpt   25  669.851 ±  72.463  ops/s
+Benchmarks.setArgbAsArgbPre     thrpt   25  734.370 ± 103.552  ops/s
+Benchmarks.setArgbPreAsArgb     thrpt   25  265.985 ±   0.038  ops/s
+Benchmarks.setArgbPreAsArgbPre  thrpt   25  285.374 ±   0.110  ops/s
+Benchmarks.setArrayAsArgb       thrpt   25  287.558 ±   0.130  ops/s
+Benchmarks.setArrayAsArgbPre    thrpt   25  326.277 ±   0.043  ops/s
+Benchmarks.toFXImage            thrpt   25  243.281 ±   0.253  ops/s
+
+Benchmark result is saved to focal-focal-java-11-openjdk-amd64-2020-06-10.txt

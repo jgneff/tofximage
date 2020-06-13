@@ -1,0 +1,27 @@
+# ======================================================================
+# GitHub Pages Default Configuration
+# https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll
+#
+# Jekyll Default Configurations
+# Latest: https://jekyllrb.com/docs/configuration/default/
+# Local: /usr/lib/ruby/vendor_ruby/jekyll/configuration.rb
+#
+# Kramdown Default Configurations
+# Latest: https://kramdown.gettalong.org/options.html
+# Local: Run "kramdown --help"
+# ======================================================================
+
+# Site variables
+title: toFXImage
+author: John Neffenger
+
+# Sass/SCSS
+sass:
+  style: :compressed
+
+# GitHub Pages
+safe: true
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge

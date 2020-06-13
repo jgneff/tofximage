@@ -1,0 +1,140 @@
+% ======================================================================
+% chart.tex - creates bar charts of the benchmark results
+% Copyright (C) 2019-2020 John Neffenger
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% ======================================================================
+\documentclass[12pt,tikz,border=0.125in]{standalone}
+\usepackage{fontspec}
+\usepackage{pgfplots}
+\setmainfont{Arimo}
+
+% PGFPLOTS options
+\pgfplotsset{compat=newest}
+\pgfplotsset{table/x=Score,table/y=Benchmark}
+\pgfplotsset{table/x error plus=Error,table/x error minus=Error}
+\pgfplotsset{error bars/x dir=both,error bars/x explicit}
+\pgfplotsset{unbounded coords=jump}
+
+% filter pgfplots data more than once (e.g. with discard if)
+% https://tex.stackexchange.com/a/301991
+\pgfplotsset{
+    discard if not/.style 2 args={
+        x filter/.code={
+            \edef\tempa{\thisrow{#1}}
+            \edef\tempb{#2}
+            \ifx\tempa\tempb
+            \else
+                \def\pgfmathresult{inf}
+            \fi
+        }
+    }
+}
+
+% Cycle list of bar colors
+\usepgfplotslibrary{colorbrewer}
+\pgfplotscreateplotcyclelist{barcolors}{
+    {fill=Paired-B},
+    {fill=Paired-B},
+    {fill=Paired-B},
+    {fill=Paired-B},
+    {fill=Paired-B},
+    {fill=Paired-A},
+    {fill=Paired-A},
+    {fill=Paired-B},
+    {fill=Paired-A},
+    {fill=Paired-A},
+    {fill=Paired-B},
+    {fill=Paired-B},
+    {fill=Paired-A},
+    {fill=Paired-B}
+}
+
+% Benchmark methods
+\newcommand{\benchmarks}{
+    forEachOrdered,
+    forEachParallel,
+    forLoopsNested,
+    putArgbPreIntoBytes,
+    putArgbPreIntoInts,
+    putArrayIntoBytes,
+    putDirectIntoInts,
+    setArgbAsArgb,
+    setArgbAsArgbPre,
+    setArgbPreAsArgb,
+    setArgbPreAsArgbPre,
+    setArrayAsArgb,
+    setArrayAsArgbPre,
+    toFXImage%
+}
+
+% Data file
+\newcommand{\data}{tmp/\jobname.dat}
+
+% Subtitle values
+\newcommand{\focal}{3.30 GHz Intel Xeon Processor E3-1225 v5 with 16 GiB of RAM}
+\newcommand{\armfocal}{QEMU armv7l virtual machine with 1 CPU and 1 GiB of RAM}
+\newcommand{\clarahd}{1.0 GHz i.MX6SLL ARM Cortex-A9 with 512 MiB of RAM}
+\newcommand{\touchc}{800 MHz i.MX507 ARM Cortex-A8 with 256 MiB of RAM}
+
+% Default values
+\providecommand{\mytitle}{Title}
+\providecommand{\mysubtitle}{Subtitle}
+\providecommand{\legendpos}{at={(0.95,0.95)},anchor=north east}
+\providecommand{\xmax}{850}
+\providecommand{\dist}{100}
+
+% PDF metadata
+\pdfinfo{
+    /Title (\mytitle)
+    /Subject (\mysubtitle)
+    /Author (John Neffenger)
+    /Keywords (JMH, AWT, Swing, JavaFX, SwingFXUtils, toFXImage)
+}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    title=\mytitle\\\small{\mysubtitle},
+    xlabel=Throughput (frames per second),
+    title style={align=center},
+    ticklabel style={font=\small},
+    x tick label style={/pgf/number format/assume math mode},
+    legend style={\legendpos,font=\small,fill=none,column sep=1ex},
+    legend cell align=left,
+    width=6in,
+    height=3.5in,
+    scale only axis,
+    xbar,
+    xmin=0,
+    xmax=\xmax,
+    xtick distance=\dist,
+    bar shift=0pt,
+    y dir=reverse,
+    symbolic y coords/.expand once = \benchmarks,
+    ytick/.expand once = \benchmarks,
+    ytick pos=left,
+    cycle list name=barcolors
+]
+\addlegendimage{fill=Paired-B}
+\addlegendentry{Correct}
+\addlegendimage{fill=Paired-A}
+\addlegendentry{Wrong alpha}
+\expandafter\pgfplotsinvokeforeach\expandafter{\benchmarks}{
+    \typeout{Plotting "#1"}
+    \addplot+[discard if not={Benchmark}{#1}] table{\data};
+}
+\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,24 @@
+/**
+ * Site-specific styles
+ */
+
+svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#markdown-toc {
+  line-height: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+  header > a > img, p > img {
+    filter: invert(1);
+  }
+
+  pre.highlight > code > span {
+    filter: invert(1); /* Inverts colors of syntax highlighting */
+    color: #00417a; /* Resets default color */
+  }
+}

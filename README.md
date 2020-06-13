@@ -1,51 +1,47 @@
-# AWT to JavaFX Image Conversion Benchmarks
+This project compares the performance of various methods for converting an AWT image to a JavaFX image, including the public utility method [`SwingFXUtils.toFXImage`](src/main/java/javafx/embed/swing/SwingFXUtils.java).
+Although some of the methods convert the alpha values incorrectly, they are included in the tests because their conversion is correct when the source AWT image contains no transparent pixels.
 
-This project looks at ways to convert an AWT image to a JavaFX image as alternatives to the method provided by [`SwingFXUtils.toFXImage`](https://github.com/javafxports/openjdk-jfx/blob/develop/modules/javafx.swing/src/main/java/javafx/embed/swing/SwingFXUtils.java). It compares the performance of the various methods using the [Java Microbenchmark Harness](https://openjdk.java.net/projects/code-tools/jmh/). The project includes benchmarks that use the `PixelBuffer` class proposed by [pull request #472](https://github.com/javafxports/openjdk-jfx/pull/472), "JDK-8167148: Add native rendering support by supporting WritableImages backed by NIO ByteBuffers."
+## Results
+
+The results of running the benchmarks on my systems are published on the [website associated with this repository](https://jgneff.github.io/tofximage/).
 
 ## Licenses
 
-The content of this project is licensed under the [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/) except for the following files, which are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://choosealicense.com/licenses/cc-by-sa-4.0/) license:
+This project is licensed under the [GNU General Public License v3.0](LICENSE) except for the following file, which is licensed by Oracle under the [GNU General Public License v2.0](src/main/java/javafx/embed/swing/LICENSE) with the [Classpath Exception](src/main/java/javafx/embed/swing/ADDITIONAL_LICENSE_INFO):
 
-* the file [doll-dancing.gif](src/main/resources/doll-dancing.gif), and
-* the bar charts found in the [*images*](images/) directory.
+* [SwingFXUtils.java](src/main/java/javafx/embed/swing/SwingFXUtils.java)
+
+The contents of the [website](https://jgneff.github.io/tofximage/) and the file [doll-dancing.gif](src/main/resources/doll-dancing.gif) are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+The website style is based on [Water.css](https://github.com/kognise/water.css).
 
 ## Building
 
-This is a Maven project of the [Apache NetBeans IDE](https://netbeans.apache.org/) with the *javafx.graphics* and *javafx.base* modules installed in the local repository. See the following shell scripts in the *bin* directory for ways to install the JavaFX 13 development artifacts locally.
+This is a Maven project that depends on the [Java Microbenchmark Harness](https://openjdk.java.net/projects/code-tools/jmh/).
+You can build and package the application as the file *target/benchmarks.jar* with the commands:
 
-* [mvninstall.sh](bin/mvninstall.sh) - Installs the artifacts from a JavaFX SDK
-* [syncopenjfx.sh](bin/syncopenjfx.sh) - Updates the artifacts from a JavaFX build machine
+```console
+$ export JAVA_HOME=$HOME/opt/jdk-14.0.1
+$ mvn package
+```
 
 ## Running
 
 Run a quick test with a command like the following:
 
 ```ShellSession
-$ $HOME/opt/jdk-12.0.1/bin/java \
-    -Djava.library.path=$HOME/lib/javafx-sdk-13-dev/lib \
+$ java -Djava.library.path=$HOME/lib/javafx-sdk-15/lib \
     -jar target/benchmarks.jar -f 1 -i 1 -wi 1
 ```
 
 Run the benchmarks with their default options for a more thorough test:
 
 ```ShellSession
-$ $HOME/opt/jdk-12.0.1/bin/java \
-    -Djava.library.path=$HOME/lib/javafx-sdk-13-dev/lib \
+$ java -Djava.library.path=$HOME/lib/javafx-sdk-15/lib \
     -jar target/benchmarks.jar
 ```
 
-The `-h` option prints a description of all JMH command options:
+The `-h` option prints a description of all benchmark command options:
 
 ```ShellSession
-$ $HOME/opt/jdk-12.0.1/bin/java -jar target/benchmarks.jar -h
+$ java -jar target/benchmarks.jar -h
 ```
-
-## Results
-
-The chart below shows the results of the tests on a Dell Precision Tower 3420 workstation. The [Dell log file](logs/dell-2019-06-27.log) contains the test output.
-
-![Results on 3.30 GHz Intel Xeon Processor E3-1225 v5](images/dell-2019-06-27.png)
-
-The chart below shows the results of the tests on a Kobo Touch N905B e-reader. The [Kobo log file](logs/kobo-2019-06-27.log) contains the test output.
-
-![Results on 800 MHz NXP i.MX507 ARM Cortex-A8](images/kobo-2019-06-27.png)

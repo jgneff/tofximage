@@ -1,13 +1,9 @@
 # Maven build directory
 /target/
 
-# Latexmk auxiliary files
-**/src/*.aux
-**/src/*.fdb_latexmk
-**/src/*.fls
-**/src/*.log
+# LaTeX output
+/images/tmp/
+/images/out/
 
-# Image Makefile targets
-**/src/*.pdf
-**/src/*.png
-**/src/*.svg
+# Jekyll output
+/docs/_site/
