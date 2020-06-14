@@ -1,0 +1,1327 @@
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.forEachOrdered
+
+# Run progress: 0.00% complete, ETA 01:56:40
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 1.238 ops/s
+# Warmup Iteration   2: 1.720 ops/s
+# Warmup Iteration   3: 1.919 ops/s
+# Warmup Iteration   4: 1.781 ops/s
+# Warmup Iteration   5: 1.755 ops/s
+Iteration   1: 1.592 ops/s
+Iteration   2: 1.931 ops/s
+Iteration   3: 1.940 ops/s
+Iteration   4: 1.939 ops/s
+Iteration   5: 1.930 ops/s
+
+# Run progress: 1.43% complete, ETA 02:47:46
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 1.281 ops/s
+# Warmup Iteration   2: 1.830 ops/s
+# Warmup Iteration   3: 1.674 ops/s
+# Warmup Iteration   4: 1.678 ops/s
+# Warmup Iteration   5: 1.840 ops/s
+Iteration   1: 1.676 ops/s
+Iteration   2: 1.678 ops/s
+Iteration   3: 1.842 ops/s
+Iteration   4: 1.682 ops/s
+Iteration   5: 1.838 ops/s
+
+# Run progress: 2.86% complete, ETA 02:43:06
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 1.392 ops/s
+# Warmup Iteration   2: 1.938 ops/s
+# Warmup Iteration   3: 1.782 ops/s
+# Warmup Iteration   4: 1.765 ops/s
+# Warmup Iteration   5: 1.772 ops/s
+Iteration   1: 1.778 ops/s
+Iteration   2: 1.824 ops/s
+Iteration   3: 1.944 ops/s
+Iteration   4: 1.761 ops/s
+Iteration   5: 1.947 ops/s
+
+# Run progress: 4.29% complete, ETA 02:40:04
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 1.855 ops/s
+# Warmup Iteration   2: 2.469 ops/s
+# Warmup Iteration   3: 2.468 ops/s
+# Warmup Iteration   4: 2.471 ops/s
+# Warmup Iteration   5: 2.441 ops/s
+Iteration   1: 2.700 ops/s
+Iteration   2: 2.440 ops/s
+Iteration   3: 2.622 ops/s
+Iteration   4: 2.681 ops/s
+Iteration   5: 2.274 ops/s
+
+# Run progress: 5.71% complete, ETA 02:37:00
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 2.089 ops/s
+# Warmup Iteration   2: 2.677 ops/s
+# Warmup Iteration   3: 1.781 ops/s
+# Warmup Iteration   4: 0.810 ops/s
+# Warmup Iteration   5: 0.799 ops/s
+Iteration   1: 0.868 ops/s
+Iteration   2: 0.809 ops/s
+Iteration   3: 0.802 ops/s
+Iteration   4: 0.802 ops/s
+Iteration   5: 0.811 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.forEachOrdered":
+  1.764 ±(99.9%) 0.430 ops/s [Average]
+  (min, avg, max) = (0.802, 1.764, 2.700), stdev = 0.573
+  CI (99.9%): [1.335, 2.194] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.forEachParallel
+
+# Run progress: 7.14% complete, ETA 02:35:24
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 0.452 ops/s
+# Warmup Iteration   2: 0.570 ops/s
+# Warmup Iteration   3: 0.560 ops/s
+# Warmup Iteration   4: 0.564 ops/s
+# Warmup Iteration   5: 0.573 ops/s
+Iteration   1: 0.565 ops/s
+Iteration   2: 0.584 ops/s
+Iteration   3: 0.593 ops/s
+Iteration   4: 0.579 ops/s
+Iteration   5: 0.579 ops/s
+
+# Run progress: 8.57% complete, ETA 02:33:17
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 0.446 ops/s
+# Warmup Iteration   2: 0.567 ops/s
+# Warmup Iteration   3: 0.571 ops/s
+# Warmup Iteration   4: 0.571 ops/s
+# Warmup Iteration   5: 0.567 ops/s
+Iteration   1: 0.561 ops/s
+Iteration   2: 0.574 ops/s
+Iteration   3: 0.580 ops/s
+Iteration   4: 0.603 ops/s
+Iteration   5: 0.609 ops/s
+
+# Run progress: 10.00% complete, ETA 02:31:26
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 0.449 ops/s
+# Warmup Iteration   2: 0.572 ops/s
+# Warmup Iteration   3: 0.565 ops/s
+# Warmup Iteration   4: 0.567 ops/s
+# Warmup Iteration   5: 0.566 ops/s
+Iteration   1: 0.578 ops/s
+Iteration   2: 0.590 ops/s
+Iteration   3: 0.587 ops/s
+Iteration   4: 0.575 ops/s
+Iteration   5: 0.586 ops/s
+
+# Run progress: 11.43% complete, ETA 02:29:01
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 0.448 ops/s
+# Warmup Iteration   2: 0.564 ops/s
+# Warmup Iteration   3: 0.563 ops/s
+# Warmup Iteration   4: 0.554 ops/s
+# Warmup Iteration   5: 0.578 ops/s
+Iteration   1: 0.556 ops/s
+Iteration   2: 0.565 ops/s
+Iteration   3: 0.578 ops/s
+Iteration   4: 0.596 ops/s
+Iteration   5: 0.570 ops/s
+
+# Run progress: 12.86% complete, ETA 02:26:44
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 0.443 ops/s
+# Warmup Iteration   2: 0.564 ops/s
+# Warmup Iteration   3: 0.583 ops/s
+# Warmup Iteration   4: 0.570 ops/s
+# Warmup Iteration   5: 0.570 ops/s
+Iteration   1: 0.572 ops/s
+Iteration   2: 0.583 ops/s
+Iteration   3: 0.579 ops/s
+Iteration   4: 0.570 ops/s
+Iteration   5: 0.564 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.forEachParallel":
+  0.579 ±(99.9%) 0.010 ops/s [Average]
+  (min, avg, max) = (0.556, 0.579, 0.609), stdev = 0.013
+  CI (99.9%): [0.569, 0.589] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.forLoopsNested
+
+# Run progress: 14.29% complete, ETA 02:24:25
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 1.893 ops/s
+# Warmup Iteration   2: 2.437 ops/s
+# Warmup Iteration   3: 2.431 ops/s
+# Warmup Iteration   4: 2.444 ops/s
+# Warmup Iteration   5: 2.444 ops/s
+Iteration   1: 2.443 ops/s
+Iteration   2: 2.436 ops/s
+Iteration   3: 2.435 ops/s
+Iteration   4: 2.439 ops/s
+Iteration   5: 2.422 ops/s
+
+# Run progress: 15.71% complete, ETA 02:21:46
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 2.224 ops/s
+# Warmup Iteration   2: 2.812 ops/s
+# Warmup Iteration   3: 2.783 ops/s
+# Warmup Iteration   4: 2.790 ops/s
+# Warmup Iteration   5: 2.798 ops/s
+Iteration   1: 2.842 ops/s
+Iteration   2: 2.835 ops/s
+Iteration   3: 2.808 ops/s
+Iteration   4: 2.839 ops/s
+Iteration   5: 2.823 ops/s
+
+# Run progress: 17.14% complete, ETA 02:19:09
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 2.224 ops/s
+# Warmup Iteration   2: 2.821 ops/s
+# Warmup Iteration   3: 2.838 ops/s
+# Warmup Iteration   4: 2.841 ops/s
+# Warmup Iteration   5: 2.783 ops/s
+Iteration   1: 2.826 ops/s
+Iteration   2: 2.808 ops/s
+Iteration   3: 2.812 ops/s
+Iteration   4: 2.841 ops/s
+Iteration   5: 2.775 ops/s
+
+# Run progress: 18.57% complete, ETA 02:16:36
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 1.583 ops/s
+# Warmup Iteration   2: 2.047 ops/s
+# Warmup Iteration   3: 2.054 ops/s
+# Warmup Iteration   4: 2.042 ops/s
+# Warmup Iteration   5: 2.056 ops/s
+Iteration   1: 2.049 ops/s
+Iteration   2: 2.057 ops/s
+Iteration   3: 2.052 ops/s
+Iteration   4: 2.045 ops/s
+Iteration   5: 2.050 ops/s
+
+# Run progress: 20.00% complete, ETA 02:14:04
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 1.490 ops/s
+# Warmup Iteration   2: 1.901 ops/s
+# Warmup Iteration   3: 1.906 ops/s
+# Warmup Iteration   4: 1.905 ops/s
+# Warmup Iteration   5: 1.899 ops/s
+Iteration   1: 1.906 ops/s
+Iteration   2: 1.907 ops/s
+Iteration   3: 1.904 ops/s
+Iteration   4: 1.907 ops/s
+Iteration   5: 1.901 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.forLoopsNested":
+  2.406 ±(99.9%) 0.291 ops/s [Average]
+  (min, avg, max) = (1.901, 2.406, 2.842), stdev = 0.388
+  CI (99.9%): [2.116, 2.697] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.putArgbPreIntoBytes
+
+# Run progress: 21.43% complete, ETA 02:11:41
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 13.865 ops/s
+# Warmup Iteration   2: 13.872 ops/s
+# Warmup Iteration   3: 13.926 ops/s
+# Warmup Iteration   4: 14.006 ops/s
+# Warmup Iteration   5: 14.004 ops/s
+Iteration   1: 13.996 ops/s
+Iteration   2: 13.987 ops/s
+Iteration   3: 14.005 ops/s
+Iteration   4: 14.001 ops/s
+Iteration   5: 14.009 ops/s
+
+# Run progress: 22.86% complete, ETA 02:09:52
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 15.033 ops/s
+# Warmup Iteration   2: 15.022 ops/s
+# Warmup Iteration   3: 15.092 ops/s
+# Warmup Iteration   4: 15.178 ops/s
+# Warmup Iteration   5: 15.173 ops/s
+Iteration   1: 15.182 ops/s
+Iteration   2: 15.152 ops/s
+Iteration   3: 15.175 ops/s
+Iteration   4: 15.182 ops/s
+Iteration   5: 15.163 ops/s
+
+# Run progress: 24.29% complete, ETA 02:07:54
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 15.067 ops/s
+# Warmup Iteration   2: 15.059 ops/s
+# Warmup Iteration   3: 15.103 ops/s
+# Warmup Iteration   4: 15.207 ops/s
+# Warmup Iteration   5: 15.194 ops/s
+Iteration   1: 15.199 ops/s
+Iteration   2: 15.185 ops/s
+Iteration   3: 15.197 ops/s
+Iteration   4: 15.201 ops/s
+Iteration   5: 15.184 ops/s
+
+# Run progress: 25.71% complete, ETA 02:05:54
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 13.307 ops/s
+# Warmup Iteration   2: 13.312 ops/s
+# Warmup Iteration   3: 13.346 ops/s
+# Warmup Iteration   4: 13.334 ops/s
+# Warmup Iteration   5: 13.430 ops/s
+Iteration   1: 13.437 ops/s
+Iteration   2: 13.414 ops/s
+Iteration   3: 13.431 ops/s
+Iteration   4: 13.437 ops/s
+Iteration   5: 13.426 ops/s
+
+# Run progress: 27.14% complete, ETA 02:03:50
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 14.028 ops/s
+# Warmup Iteration   2: 14.017 ops/s
+# Warmup Iteration   3: 14.075 ops/s
+# Warmup Iteration   4: 14.159 ops/s
+# Warmup Iteration   5: 14.153 ops/s
+Iteration   1: 14.154 ops/s
+Iteration   2: 14.143 ops/s
+Iteration   3: 14.162 ops/s
+Iteration   4: 14.157 ops/s
+Iteration   5: 14.164 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.putArgbPreIntoBytes":
+  14.390 ±(99.9%) 0.528 ops/s [Average]
+  (min, avg, max) = (13.414, 14.390, 15.201), stdev = 0.705
+  CI (99.9%): [13.862, 14.918] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.putArgbPreIntoInts
+
+# Run progress: 28.57% complete, ETA 02:01:41
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 13.348 ops/s
+# Warmup Iteration   2: 13.353 ops/s
+# Warmup Iteration   3: 13.393 ops/s
+# Warmup Iteration   4: 13.467 ops/s
+# Warmup Iteration   5: 13.472 ops/s
+Iteration   1: 13.461 ops/s
+Iteration   2: 13.484 ops/s
+Iteration   3: 13.039 ops/s
+Iteration   4: 13.475 ops/s
+Iteration   5: 13.473 ops/s
+
+# Run progress: 30.00% complete, ETA 01:59:30
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 14.147 ops/s
+# Warmup Iteration   2: 13.965 ops/s
+# Warmup Iteration   3: 14.267 ops/s
+# Warmup Iteration   4: 14.280 ops/s
+# Warmup Iteration   5: 14.290 ops/s
+Iteration   1: 14.201 ops/s
+Iteration   2: 14.298 ops/s
+Iteration   3: 14.292 ops/s
+Iteration   4: 14.291 ops/s
+Iteration   5: 14.271 ops/s
+
+# Run progress: 31.43% complete, ETA 01:57:20
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 15.041 ops/s
+# Warmup Iteration   2: 14.969 ops/s
+# Warmup Iteration   3: 15.025 ops/s
+# Warmup Iteration   4: 15.185 ops/s
+# Warmup Iteration   5: 15.175 ops/s
+Iteration   1: 15.161 ops/s
+Iteration   2: 15.177 ops/s
+Iteration   3: 14.551 ops/s
+Iteration   4: 15.180 ops/s
+Iteration   5: 15.150 ops/s
+
+# Run progress: 32.86% complete, ETA 01:55:07
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 13.024 ops/s
+# Warmup Iteration   2: 12.949 ops/s
+# Warmup Iteration   3: 13.113 ops/s
+# Warmup Iteration   4: 13.145 ops/s
+# Warmup Iteration   5: 13.120 ops/s
+Iteration   1: 13.142 ops/s
+Iteration   2: 13.138 ops/s
+Iteration   3: 13.131 ops/s
+Iteration   4: 13.131 ops/s
+Iteration   5: 13.128 ops/s
+
+# Run progress: 34.29% complete, ETA 01:52:52
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 15.023 ops/s
+# Warmup Iteration   2: 14.960 ops/s
+# Warmup Iteration   3: 15.165 ops/s
+# Warmup Iteration   4: 15.183 ops/s
+# Warmup Iteration   5: 15.182 ops/s
+Iteration   1: 15.182 ops/s
+Iteration   2: 15.181 ops/s
+Iteration   3: 15.187 ops/s
+Iteration   4: 15.198 ops/s
+Iteration   5: 15.160 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.putArgbPreIntoInts":
+  14.203 ±(99.9%) 0.646 ops/s [Average]
+  (min, avg, max) = (13.039, 14.203, 15.198), stdev = 0.863
+  CI (99.9%): [13.557, 14.850] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.putArrayIntoBytes
+
+# Run progress: 35.71% complete, ETA 01:50:35
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 12.886 ops/s
+# Warmup Iteration   2: 15.082 ops/s
+# Warmup Iteration   3: 15.252 ops/s
+# Warmup Iteration   4: 15.244 ops/s
+# Warmup Iteration   5: 15.242 ops/s
+Iteration   1: 15.250 ops/s
+Iteration   2: 15.248 ops/s
+Iteration   3: 15.268 ops/s
+Iteration   4: 15.232 ops/s
+Iteration   5: 15.200 ops/s
+
+# Run progress: 37.14% complete, ETA 01:48:15
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.557 ops/s
+# Warmup Iteration   2: 13.437 ops/s
+# Warmup Iteration   3: 13.583 ops/s
+# Warmup Iteration   4: 13.587 ops/s
+# Warmup Iteration   5: 13.571 ops/s
+Iteration   1: 13.554 ops/s
+Iteration   2: 13.573 ops/s
+Iteration   3: 13.583 ops/s
+Iteration   4: 13.591 ops/s
+Iteration   5: 13.557 ops/s
+
+# Run progress: 38.57% complete, ETA 01:45:52
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 12.862 ops/s
+# Warmup Iteration   2: 15.068 ops/s
+# Warmup Iteration   3: 15.244 ops/s
+# Warmup Iteration   4: 15.219 ops/s
+# Warmup Iteration   5: 15.259 ops/s
+Iteration   1: 15.227 ops/s
+Iteration   2: 15.200 ops/s
+Iteration   3: 15.199 ops/s
+Iteration   4: 15.216 ops/s
+Iteration   5: 15.211 ops/s
+
+# Run progress: 40.00% complete, ETA 01:43:31
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 12.851 ops/s
+# Warmup Iteration   2: 15.078 ops/s
+# Warmup Iteration   3: 15.224 ops/s
+# Warmup Iteration   4: 15.230 ops/s
+# Warmup Iteration   5: 15.240 ops/s
+Iteration   1: 15.236 ops/s
+Iteration   2: 15.258 ops/s
+Iteration   3: 15.200 ops/s
+Iteration   4: 15.237 ops/s
+Iteration   5: 15.263 ops/s
+
+# Run progress: 41.43% complete, ETA 01:41:09
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 12.886 ops/s
+# Warmup Iteration   2: 15.076 ops/s
+# Warmup Iteration   3: 15.229 ops/s
+# Warmup Iteration   4: 15.257 ops/s
+# Warmup Iteration   5: 15.259 ops/s
+Iteration   1: 15.263 ops/s
+Iteration   2: 15.244 ops/s
+Iteration   3: 15.266 ops/s
+Iteration   4: 15.249 ops/s
+Iteration   5: 15.234 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.putArrayIntoBytes":
+  14.902 ±(99.9%) 0.509 ops/s [Average]
+  (min, avg, max) = (13.554, 14.902, 15.268), stdev = 0.679
+  CI (99.9%): [14.393, 15.411] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.putDirectIntoInts
+
+# Run progress: 42.86% complete, ETA 01:38:47
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 13.029 ops/s
+# Warmup Iteration   2: 15.169 ops/s
+# Warmup Iteration   3: 15.184 ops/s
+# Warmup Iteration   4: 15.279 ops/s
+# Warmup Iteration   5: 15.302 ops/s
+Iteration   1: 15.238 ops/s
+Iteration   2: 15.303 ops/s
+Iteration   3: 15.276 ops/s
+Iteration   4: 15.255 ops/s
+Iteration   5: 15.287 ops/s
+
+# Run progress: 44.29% complete, ETA 01:36:08
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 14.739 ops/s
+# Warmup Iteration   2: 17.337 ops/s
+# Warmup Iteration   3: 17.320 ops/s
+# Warmup Iteration   4: 17.396 ops/s
+# Warmup Iteration   5: 17.407 ops/s
+Iteration   1: 17.425 ops/s
+Iteration   2: 17.365 ops/s
+Iteration   3: 17.411 ops/s
+Iteration   4: 17.393 ops/s
+Iteration   5: 17.404 ops/s
+
+# Run progress: 45.71% complete, ETA 01:33:30
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 14.590 ops/s
+# Warmup Iteration   2: 17.269 ops/s
+# Warmup Iteration   3: 17.379 ops/s
+# Warmup Iteration   4: 17.391 ops/s
+# Warmup Iteration   5: 17.303 ops/s
+Iteration   1: 17.372 ops/s
+Iteration   2: 17.412 ops/s
+Iteration   3: 17.426 ops/s
+Iteration   4: 17.331 ops/s
+Iteration   5: 17.393 ops/s
+
+# Run progress: 47.14% complete, ETA 01:30:53
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 12.948 ops/s
+# Warmup Iteration   2: 15.135 ops/s
+# Warmup Iteration   3: 15.181 ops/s
+# Warmup Iteration   4: 15.286 ops/s
+# Warmup Iteration   5: 15.254 ops/s
+Iteration   1: 15.251 ops/s
+Iteration   2: 15.281 ops/s
+Iteration   3: 15.260 ops/s
+Iteration   4: 15.263 ops/s
+Iteration   5: 15.256 ops/s
+
+# Run progress: 48.57% complete, ETA 01:28:18
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 12.882 ops/s
+# Warmup Iteration   2: 15.178 ops/s
+# Warmup Iteration   3: 15.259 ops/s
+# Warmup Iteration   4: 15.238 ops/s
+# Warmup Iteration   5: 15.164 ops/s
+Iteration   1: 15.254 ops/s
+Iteration   2: 15.270 ops/s
+Iteration   3: 15.243 ops/s
+Iteration   4: 15.272 ops/s
+Iteration   5: 15.249 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.putDirectIntoInts":
+  16.116 ±(99.9%) 0.798 ops/s [Average]
+  (min, avg, max) = (15.238, 16.116, 17.426), stdev = 1.065
+  CI (99.9%): [15.318, 16.913] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArgbAsArgb
+
+# Run progress: 50.00% complete, ETA 01:25:42
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 42.807 ops/s
+# Warmup Iteration   2: 45.295 ops/s
+# Warmup Iteration   3: 45.795 ops/s
+# Warmup Iteration   4: 45.828 ops/s
+# Warmup Iteration   5: 45.851 ops/s
+Iteration   1: 45.743 ops/s
+Iteration   2: 45.823 ops/s
+Iteration   3: 45.835 ops/s
+Iteration   4: 45.850 ops/s
+Iteration   5: 45.666 ops/s
+
+# Run progress: 51.43% complete, ETA 01:23:21
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 42.260 ops/s
+# Warmup Iteration   2: 45.078 ops/s
+# Warmup Iteration   3: 45.641 ops/s
+# Warmup Iteration   4: 45.592 ops/s
+# Warmup Iteration   5: 45.628 ops/s
+Iteration   1: 45.616 ops/s
+Iteration   2: 45.619 ops/s
+Iteration   3: 45.620 ops/s
+Iteration   4: 45.543 ops/s
+Iteration   5: 45.598 ops/s
+
+# Run progress: 52.86% complete, ETA 01:20:59
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 40.263 ops/s
+# Warmup Iteration   2: 42.265 ops/s
+# Warmup Iteration   3: 42.763 ops/s
+# Warmup Iteration   4: 42.949 ops/s
+# Warmup Iteration   5: 43.033 ops/s
+Iteration   1: 42.734 ops/s
+Iteration   2: 42.816 ops/s
+Iteration   3: 42.792 ops/s
+Iteration   4: 42.758 ops/s
+Iteration   5: 42.850 ops/s
+
+# Run progress: 54.29% complete, ETA 01:18:37
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 42.960 ops/s
+# Warmup Iteration   2: 45.453 ops/s
+# Warmup Iteration   3: 45.921 ops/s
+# Warmup Iteration   4: 45.995 ops/s
+# Warmup Iteration   5: 46.039 ops/s
+Iteration   1: 45.937 ops/s
+Iteration   2: 45.973 ops/s
+Iteration   3: 45.981 ops/s
+Iteration   4: 46.010 ops/s
+Iteration   5: 45.858 ops/s
+
+# Run progress: 55.71% complete, ETA 01:16:14
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 40.500 ops/s
+# Warmup Iteration   2: 42.672 ops/s
+# Warmup Iteration   3: 43.268 ops/s
+# Warmup Iteration   4: 43.388 ops/s
+# Warmup Iteration   5: 43.296 ops/s
+Iteration   1: 43.123 ops/s
+Iteration   2: 43.217 ops/s
+Iteration   3: 43.348 ops/s
+Iteration   4: 43.261 ops/s
+Iteration   5: 43.300 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArgbAsArgb":
+  44.675 ±(99.9%) 1.043 ops/s [Average]
+  (min, avg, max) = (42.734, 44.675, 46.010), stdev = 1.393
+  CI (99.9%): [43.631, 45.718] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArgbAsArgbPre
+
+# Run progress: 57.14% complete, ETA 01:13:50
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 50.550 ops/s
+# Warmup Iteration   2: 53.066 ops/s
+# Warmup Iteration   3: 53.572 ops/s
+# Warmup Iteration   4: 53.701 ops/s
+# Warmup Iteration   5: 53.725 ops/s
+Iteration   1: 53.480 ops/s
+Iteration   2: 53.652 ops/s
+Iteration   3: 53.385 ops/s
+Iteration   4: 53.664 ops/s
+Iteration   5: 53.528 ops/s
+
+# Run progress: 58.57% complete, ETA 01:11:26
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 50.781 ops/s
+# Warmup Iteration   2: 53.328 ops/s
+# Warmup Iteration   3: 54.009 ops/s
+# Warmup Iteration   4: 53.882 ops/s
+# Warmup Iteration   5: 53.979 ops/s
+Iteration   1: 53.872 ops/s
+Iteration   2: 54.069 ops/s
+Iteration   3: 53.720 ops/s
+Iteration   4: 53.838 ops/s
+Iteration   5: 53.932 ops/s
+
+# Run progress: 60.00% complete, ETA 01:09:02
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 50.729 ops/s
+# Warmup Iteration   2: 53.321 ops/s
+# Warmup Iteration   3: 53.814 ops/s
+# Warmup Iteration   4: 53.835 ops/s
+# Warmup Iteration   5: 53.907 ops/s
+Iteration   1: 53.819 ops/s
+Iteration   2: 53.910 ops/s
+Iteration   3: 53.854 ops/s
+Iteration   4: 53.830 ops/s
+Iteration   5: 53.798 ops/s
+
+# Run progress: 61.43% complete, ETA 01:06:37
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 50.209 ops/s
+# Warmup Iteration   2: 52.452 ops/s
+# Warmup Iteration   3: 53.187 ops/s
+# Warmup Iteration   4: 53.277 ops/s
+# Warmup Iteration   5: 53.239 ops/s
+Iteration   1: 53.180 ops/s
+Iteration   2: 53.339 ops/s
+Iteration   3: 53.124 ops/s
+Iteration   4: 53.287 ops/s
+Iteration   5: 53.023 ops/s
+
+# Run progress: 62.86% complete, ETA 01:04:12
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 49.503 ops/s
+# Warmup Iteration   2: 52.292 ops/s
+# Warmup Iteration   3: 52.524 ops/s
+# Warmup Iteration   4: 52.742 ops/s
+# Warmup Iteration   5: 52.616 ops/s
+Iteration   1: 52.583 ops/s
+Iteration   2: 52.615 ops/s
+Iteration   3: 52.572 ops/s
+Iteration   4: 52.636 ops/s
+Iteration   5: 52.546 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArgbAsArgbPre":
+  53.410 ±(99.9%) 0.373 ops/s [Average]
+  (min, avg, max) = (52.546, 53.410, 54.069), stdev = 0.498
+  CI (99.9%): [53.037, 53.783] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArgbPreAsArgb
+
+# Run progress: 64.29% complete, ETA 01:01:46
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.663 ops/s
+# Warmup Iteration   2: 12.355 ops/s
+# Warmup Iteration   3: 12.371 ops/s
+# Warmup Iteration   4: 12.483 ops/s
+# Warmup Iteration   5: 12.455 ops/s
+Iteration   1: 12.478 ops/s
+Iteration   2: 12.464 ops/s
+Iteration   3: 12.475 ops/s
+Iteration   4: 12.483 ops/s
+Iteration   5: 12.477 ops/s
+
+# Run progress: 65.71% complete, ETA 00:59:21
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 13.078 ops/s
+# Warmup Iteration   2: 13.844 ops/s
+# Warmup Iteration   3: 13.902 ops/s
+# Warmup Iteration   4: 14.004 ops/s
+# Warmup Iteration   5: 14.000 ops/s
+Iteration   1: 14.010 ops/s
+Iteration   2: 13.964 ops/s
+Iteration   3: 13.991 ops/s
+Iteration   4: 14.010 ops/s
+Iteration   5: 14.000 ops/s
+
+# Run progress: 67.14% complete, ETA 00:56:55
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.384 ops/s
+# Warmup Iteration   2: 12.127 ops/s
+# Warmup Iteration   3: 12.125 ops/s
+# Warmup Iteration   4: 12.211 ops/s
+# Warmup Iteration   5: 12.212 ops/s
+Iteration   1: 12.220 ops/s
+Iteration   2: 12.203 ops/s
+Iteration   3: 12.210 ops/s
+Iteration   4: 12.219 ops/s
+Iteration   5: 12.195 ops/s
+
+# Run progress: 68.57% complete, ETA 00:54:28
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.708 ops/s
+# Warmup Iteration   2: 12.395 ops/s
+# Warmup Iteration   3: 12.422 ops/s
+# Warmup Iteration   4: 12.484 ops/s
+# Warmup Iteration   5: 12.508 ops/s
+Iteration   1: 12.488 ops/s
+Iteration   2: 12.478 ops/s
+Iteration   3: 12.491 ops/s
+Iteration   4: 12.489 ops/s
+Iteration   5: 12.504 ops/s
+
+# Run progress: 70.00% complete, ETA 00:52:02
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.473 ops/s
+# Warmup Iteration   2: 12.202 ops/s
+# Warmup Iteration   3: 12.208 ops/s
+# Warmup Iteration   4: 12.311 ops/s
+# Warmup Iteration   5: 12.301 ops/s
+Iteration   1: 12.303 ops/s
+Iteration   2: 12.290 ops/s
+Iteration   3: 12.147 ops/s
+Iteration   4: 12.312 ops/s
+Iteration   5: 12.281 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArgbPreAsArgb":
+  12.687 ±(99.9%) 0.507 ops/s [Average]
+  (min, avg, max) = (12.147, 12.687, 14.010), stdev = 0.677
+  CI (99.9%): [12.180, 13.195] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArgbPreAsArgbPre
+
+# Run progress: 71.43% complete, ETA 00:49:35
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 12.252 ops/s
+# Warmup Iteration   2: 12.924 ops/s
+# Warmup Iteration   3: 12.928 ops/s
+# Warmup Iteration   4: 13.025 ops/s
+# Warmup Iteration   5: 13.001 ops/s
+Iteration   1: 13.024 ops/s
+Iteration   2: 12.972 ops/s
+Iteration   3: 13.015 ops/s
+Iteration   4: 13.014 ops/s
+Iteration   5: 13.022 ops/s
+
+# Run progress: 72.86% complete, ETA 00:47:08
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 13.730 ops/s
+# Warmup Iteration   2: 14.504 ops/s
+# Warmup Iteration   3: 14.489 ops/s
+# Warmup Iteration   4: 14.448 ops/s
+# Warmup Iteration   5: 14.586 ops/s
+Iteration   1: 14.590 ops/s
+Iteration   2: 14.567 ops/s
+Iteration   3: 14.593 ops/s
+Iteration   4: 14.602 ops/s
+Iteration   5: 14.598 ops/s
+
+# Run progress: 74.29% complete, ETA 00:44:40
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 13.050 ops/s
+# Warmup Iteration   2: 13.805 ops/s
+# Warmup Iteration   3: 13.766 ops/s
+# Warmup Iteration   4: 13.825 ops/s
+# Warmup Iteration   5: 13.857 ops/s
+Iteration   1: 13.843 ops/s
+Iteration   2: 13.808 ops/s
+Iteration   3: 13.856 ops/s
+Iteration   4: 13.856 ops/s
+Iteration   5: 13.840 ops/s
+
+# Run progress: 75.71% complete, ETA 00:42:13
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 12.597 ops/s
+# Warmup Iteration   2: 13.263 ops/s
+# Warmup Iteration   3: 13.282 ops/s
+# Warmup Iteration   4: 13.381 ops/s
+# Warmup Iteration   5: 13.381 ops/s
+Iteration   1: 13.386 ops/s
+Iteration   2: 13.375 ops/s
+Iteration   3: 13.402 ops/s
+Iteration   4: 13.405 ops/s
+Iteration   5: 13.401 ops/s
+
+# Run progress: 77.14% complete, ETA 00:39:45
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 13.847 ops/s
+# Warmup Iteration   2: 14.576 ops/s
+# Warmup Iteration   3: 14.582 ops/s
+# Warmup Iteration   4: 14.685 ops/s
+# Warmup Iteration   5: 14.691 ops/s
+Iteration   1: 14.690 ops/s
+Iteration   2: 14.659 ops/s
+Iteration   3: 14.691 ops/s
+Iteration   4: 14.696 ops/s
+Iteration   5: 14.697 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArgbPreAsArgbPre":
+  13.904 ±(99.9%) 0.501 ops/s [Average]
+  (min, avg, max) = (12.972, 13.904, 14.697), stdev = 0.669
+  CI (99.9%): [13.403, 14.405] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArrayAsArgb
+
+# Run progress: 78.57% complete, ETA 00:37:17
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.138 ops/s
+# Warmup Iteration   2: 14.095 ops/s
+# Warmup Iteration   3: 14.021 ops/s
+# Warmup Iteration   4: 14.052 ops/s
+# Warmup Iteration   5: 14.086 ops/s
+Iteration   1: 14.120 ops/s
+Iteration   2: 14.063 ops/s
+Iteration   3: 14.127 ops/s
+Iteration   4: 14.106 ops/s
+Iteration   5: 14.093 ops/s
+
+# Run progress: 80.00% complete, ETA 00:34:48
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.085 ops/s
+# Warmup Iteration   2: 14.111 ops/s
+# Warmup Iteration   3: 14.023 ops/s
+# Warmup Iteration   4: 14.119 ops/s
+# Warmup Iteration   5: 14.078 ops/s
+Iteration   1: 14.110 ops/s
+Iteration   2: 14.068 ops/s
+Iteration   3: 14.123 ops/s
+Iteration   4: 14.103 ops/s
+Iteration   5: 14.099 ops/s
+
+# Run progress: 81.43% complete, ETA 00:32:20
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 10.081 ops/s
+# Warmup Iteration   2: 12.679 ops/s
+# Warmup Iteration   3: 12.695 ops/s
+# Warmup Iteration   4: 12.750 ops/s
+# Warmup Iteration   5: 12.741 ops/s
+Iteration   1: 12.729 ops/s
+Iteration   2: 12.747 ops/s
+Iteration   3: 12.734 ops/s
+Iteration   4: 12.651 ops/s
+Iteration   5: 12.712 ops/s
+
+# Run progress: 82.86% complete, ETA 00:29:51
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 10.954 ops/s
+# Warmup Iteration   2: 13.901 ops/s
+# Warmup Iteration   3: 13.845 ops/s
+# Warmup Iteration   4: 13.920 ops/s
+# Warmup Iteration   5: 13.929 ops/s
+Iteration   1: 13.848 ops/s
+Iteration   2: 13.865 ops/s
+Iteration   3: 13.909 ops/s
+Iteration   4: 13.925 ops/s
+Iteration   5: 13.920 ops/s
+
+# Run progress: 84.29% complete, ETA 00:27:22
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.147 ops/s
+# Warmup Iteration   2: 14.101 ops/s
+# Warmup Iteration   3: 14.018 ops/s
+# Warmup Iteration   4: 14.123 ops/s
+# Warmup Iteration   5: 14.101 ops/s
+Iteration   1: 14.041 ops/s
+Iteration   2: 14.096 ops/s
+Iteration   3: 14.146 ops/s
+Iteration   4: 14.130 ops/s
+Iteration   5: 14.121 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArrayAsArgb":
+  13.783 ±(99.9%) 0.414 ops/s [Average]
+  (min, avg, max) = (12.651, 13.783, 14.146), stdev = 0.553
+  CI (99.9%): [13.370, 14.197] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.setArrayAsArgbPre
+
+# Run progress: 85.71% complete, ETA 00:24:53
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.787 ops/s
+# Warmup Iteration   2: 14.778 ops/s
+# Warmup Iteration   3: 14.718 ops/s
+# Warmup Iteration   4: 14.834 ops/s
+# Warmup Iteration   5: 14.793 ops/s
+Iteration   1: 14.808 ops/s
+Iteration   2: 14.746 ops/s
+Iteration   3: 14.787 ops/s
+Iteration   4: 14.821 ops/s
+Iteration   5: 14.824 ops/s
+
+# Run progress: 87.14% complete, ETA 00:22:24
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 11.739 ops/s
+# Warmup Iteration   2: 14.725 ops/s
+# Warmup Iteration   3: 14.696 ops/s
+# Warmup Iteration   4: 14.788 ops/s
+# Warmup Iteration   5: 14.782 ops/s
+Iteration   1: 14.776 ops/s
+Iteration   2: 14.745 ops/s
+Iteration   3: 14.779 ops/s
+Iteration   4: 14.786 ops/s
+Iteration   5: 14.763 ops/s
+
+# Run progress: 88.57% complete, ETA 00:19:55
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 10.565 ops/s
+# Warmup Iteration   2: 13.164 ops/s
+# Warmup Iteration   3: 13.024 ops/s
+# Warmup Iteration   4: 13.195 ops/s
+# Warmup Iteration   5: 13.161 ops/s
+Iteration   1: 13.185 ops/s
+Iteration   2: 13.169 ops/s
+Iteration   3: 13.183 ops/s
+Iteration   4: 13.168 ops/s
+Iteration   5: 13.190 ops/s
+
+# Run progress: 90.00% complete, ETA 00:17:26
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 10.583 ops/s
+# Warmup Iteration   2: 13.155 ops/s
+# Warmup Iteration   3: 13.005 ops/s
+# Warmup Iteration   4: 13.158 ops/s
+# Warmup Iteration   5: 13.131 ops/s
+Iteration   1: 13.158 ops/s
+Iteration   2: 13.140 ops/s
+Iteration   3: 13.163 ops/s
+Iteration   4: 13.136 ops/s
+Iteration   5: 13.168 ops/s
+
+# Run progress: 91.43% complete, ETA 00:14:56
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 10.577 ops/s
+# Warmup Iteration   2: 13.137 ops/s
+# Warmup Iteration   3: 12.982 ops/s
+# Warmup Iteration   4: 13.160 ops/s
+# Warmup Iteration   5: 13.085 ops/s
+Iteration   1: 13.150 ops/s
+Iteration   2: 13.135 ops/s
+Iteration   3: 13.149 ops/s
+Iteration   4: 13.126 ops/s
+Iteration   5: 13.156 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.setArrayAsArgbPre":
+  13.808 ±(99.9%) 0.609 ops/s [Average]
+  (min, avg, max) = (13.126, 13.808, 14.824), stdev = 0.813
+  CI (99.9%): [13.200, 14.417] (assumes normal distribution)
+
+
+# JMH version: 1.23
+# VM version: JDK 11.0.7, OpenJDK Server VM, 11.0.7+10
+# VM invoker: /home/ubuntu/opt/jdk-11.0.7+10/bin/java
+# VM options: -Djava.library.path=/home/ubuntu/lib/armv6hf-sdk/lib
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.status6.tofximage.Benchmarks.toFXImage
+
+# Run progress: 92.86% complete, ETA 00:12:27
+# Fork: 1 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 9.670 ops/s
+# Warmup Iteration   2: 12.961 ops/s
+# Warmup Iteration   3: 13.059 ops/s
+# Warmup Iteration   4: 13.110 ops/s
+# Warmup Iteration   5: 13.232 ops/s
+Iteration   1: 13.207 ops/s
+Iteration   2: 13.228 ops/s
+Iteration   3: 13.196 ops/s
+Iteration   4: 13.206 ops/s
+Iteration   5: 13.202 ops/s
+
+# Run progress: 94.29% complete, ETA 00:09:57
+# Fork: 2 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 9.659 ops/s
+# Warmup Iteration   2: 12.972 ops/s
+# Warmup Iteration   3: 13.081 ops/s
+# Warmup Iteration   4: 13.196 ops/s
+# Warmup Iteration   5: 13.231 ops/s
+Iteration   1: 13.244 ops/s
+Iteration   2: 13.272 ops/s
+Iteration   3: 13.197 ops/s
+Iteration   4: 13.187 ops/s
+Iteration   5: 13.229 ops/s
+
+# Run progress: 95.71% complete, ETA 00:07:27
+# Fork: 3 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 9.743 ops/s
+# Warmup Iteration   2: 12.953 ops/s
+# Warmup Iteration   3: 12.990 ops/s
+# Warmup Iteration   4: 13.248 ops/s
+# Warmup Iteration   5: 13.220 ops/s
+Iteration   1: 13.215 ops/s
+Iteration   2: 13.192 ops/s
+Iteration   3: 13.208 ops/s
+Iteration   4: 13.159 ops/s
+Iteration   5: 13.211 ops/s
+
+# Run progress: 97.14% complete, ETA 00:04:58
+# Fork: 4 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 9.739 ops/s
+# Warmup Iteration   2: 13.017 ops/s
+# Warmup Iteration   3: 13.122 ops/s
+# Warmup Iteration   4: 13.205 ops/s
+# Warmup Iteration   5: 13.266 ops/s
+Iteration   1: 13.251 ops/s
+Iteration   2: 13.248 ops/s
+Iteration   3: 13.226 ops/s
+Iteration   4: 13.214 ops/s
+Iteration   5: 13.231 ops/s
+
+# Run progress: 98.57% complete, ETA 00:02:28
+# Fork: 5 of 5
+Picked up JAVA_TOOL_OPTIONS: -XX:-AssumeMP
+OpenJDK Server VM warning: Option AssumeMP was deprecated in version 10.0 and will likely be removed in a future release.
+# Warmup Iteration   1: 9.762 ops/s
+# Warmup Iteration   2: 12.925 ops/s
+# Warmup Iteration   3: 13.101 ops/s
+# Warmup Iteration   4: 13.284 ops/s
+# Warmup Iteration   5: 13.273 ops/s
+Iteration   1: 13.226 ops/s
+Iteration   2: 13.253 ops/s
+Iteration   3: 13.250 ops/s
+Iteration   4: 13.240 ops/s
+Iteration   5: 13.223 ops/s
+
+
+Result "org.status6.tofximage.Benchmarks.toFXImage":
+  13.221 ±(99.9%) 0.019 ops/s [Average]
+  (min, avg, max) = (13.159, 13.221, 13.272), stdev = 0.025
+  CI (99.9%): [13.202, 13.240] (assumes normal distribution)
+
+
+# Run complete. Total time: 02:53:37
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                        Mode  Cnt   Score   Error  Units
+Benchmarks.forEachOrdered       thrpt   25   1.764 ± 0.430  ops/s
+Benchmarks.forEachParallel      thrpt   25   0.579 ± 0.010  ops/s
+Benchmarks.forLoopsNested       thrpt   25   2.406 ± 0.291  ops/s
+Benchmarks.putArgbPreIntoBytes  thrpt   25  14.390 ± 0.528  ops/s
+Benchmarks.putArgbPreIntoInts   thrpt   25  14.203 ± 0.646  ops/s
+Benchmarks.putArrayIntoBytes    thrpt   25  14.902 ± 0.509  ops/s
+Benchmarks.putDirectIntoInts    thrpt   25  16.116 ± 0.798  ops/s
+Benchmarks.setArgbAsArgb        thrpt   25  44.675 ± 1.043  ops/s
+Benchmarks.setArgbAsArgbPre     thrpt   25  53.410 ± 0.373  ops/s
+Benchmarks.setArgbPreAsArgb     thrpt   25  12.687 ± 0.507  ops/s
+Benchmarks.setArgbPreAsArgbPre  thrpt   25  13.904 ± 0.501  ops/s
+Benchmarks.setArrayAsArgb       thrpt   25  13.783 ± 0.414  ops/s
+Benchmarks.setArrayAsArgbPre    thrpt   25  13.808 ± 0.609  ops/s
+Benchmarks.toFXImage            thrpt   25  13.221 ± 0.019  ops/s
+
+Benchmark result is saved to touchb1-trusty-jdk-11.0.7_10-2020-06-13.txt

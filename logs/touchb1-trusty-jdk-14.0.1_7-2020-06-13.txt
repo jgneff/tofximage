@@ -1,0 +1,15 @@
+Benchmark                        Mode  Cnt   Score   Error  Units
+Benchmarks.forEachOrdered       thrpt   25   0.766 ± 0.089  ops/s
+Benchmarks.forEachParallel      thrpt   25   0.556 ± 0.005  ops/s
+Benchmarks.forLoopsNested       thrpt   25   1.920 ± 0.054  ops/s
+Benchmarks.putArgbPreIntoBytes  thrpt   25  15.436 ± 0.605  ops/s
+Benchmarks.putArgbPreIntoInts   thrpt   25  13.825 ± 0.626  ops/s
+Benchmarks.putArrayIntoBytes    thrpt   25  15.627 ± 1.165  ops/s
+Benchmarks.putDirectIntoInts    thrpt   25  17.646 ± 1.368  ops/s
+Benchmarks.setArgbAsArgb        thrpt   25  45.364 ± 0.469  ops/s
+Benchmarks.setArgbAsArgbPre     thrpt   25  52.334 ± 0.692  ops/s
+Benchmarks.setArgbPreAsArgb     thrpt   25  12.980 ± 0.559  ops/s
+Benchmarks.setArgbPreAsArgbPre  thrpt   25  13.864 ± 0.529  ops/s
+Benchmarks.setArrayAsArgb       thrpt   25  14.953 ± 0.077  ops/s
+Benchmarks.setArrayAsArgbPre    thrpt   25  15.386 ± 0.796  ops/s
+Benchmarks.toFXImage            thrpt   25  13.240 ± 0.019  ops/s

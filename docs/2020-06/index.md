@@ -12,7 +12,17 @@ The results of the benchmark tests are grouped by the processor, operating syste
 * Generates table of contents as an unordered list
 {:toc}
 
-## ARM Cortex-A8
+## ARM Cortex-A8: Kobo Touch N905B
+
+### Ubuntu 14.04
+
+#### AdoptOpenJDK 11
+{% include results.md name="touchb1-trusty-jdk-11.0.7_10-2020-06-13" %}
+
+#### AdoptOpenJDK 14
+{% include results.md name="touchb1-trusty-jdk-14.0.1_7-2020-06-13" %}
+
+## ARM Cortex-A8: Kobo Touch N905C
 
 ### Ubuntu 14.04
 
@@ -22,7 +32,7 @@ The results of the benchmark tests are grouped by the processor, operating syste
 #### AdoptOpenJDK 14
 {% include results.md name="touchc-trusty-jdk-14.0.1_7-2020-06-12" %}
 
-## ARM Cortex-A9
+## ARM Cortex-A9: Kobo Clara HD N249
 
 ### Ubuntu 20.04
 
@@ -35,7 +45,7 @@ The results of the benchmark tests are grouped by the processor, operating syste
 #### Ubuntu OpenJDK 14
 {% include results.md name="clarahd-focal-java-14-openjdk-armhf-2020-06-11" %}
 
-## Intel Xeon Processor
+## Intel Xeon: Dell Precision Tower 3420
 
 ### Ubuntu 20.04
 
