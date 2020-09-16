@@ -24,9 +24,9 @@ webdir = ../docs
 # Commands
 LATEXMK  = latexmk
 EXIFTOOL = exiftool
-MUDRAW   = mudraw
+MUDRAW   = mutool draw
 OPTIPNG  = optipng
-INKSCAPE = /snap/bin/inkscape
+INKSCAPE = inkscape
 CLEANER  = $(HOME)/opt/svgcleaner-0.9.5/svgcleaner
 RSYNC    = rsync
 
@@ -37,10 +37,9 @@ OPTIPNG_OPTS = -quiet
 CLEANER_OPTS = --indent=0 --remove-declarations=no
 RSYNC_OPTS   = --archive --verbose --checksum --ignore-missing-args
 
-# ExifTool options to list the XMP metadata
-# A missing XML declaration causes "Error: File format error" in ExifTool 10.10,
-# fixed in 11.66 (https://exiftool.org/forum/index.php?topic=10456.0).
-exif_xmp := -xmp:all -groupNames1 -veryShort -duplicates
+# ExifTool options to list the Creative Commons license metadata
+exif_xmp := -XMP-cc:all -XMP-dc:all -XMP-xmpRights:all \
+    -groupNames1 -veryShort -duplicates
 
 # Sed scripts to create PGFPLOTS data from the result text files
 sed_txt := -e "s/^Benchmark[ ]\{11\}/Benchmark/"
@@ -100,7 +99,7 @@ out/%.png: tmp/%.png metadata.xmp
 	$(OPTIPNG) $(OPTIPNG_OPTS) $@
 
 tmp/%.svg: out/%.pdf
-	$(INKSCAPE) --export-plain-svg --export-filename=$@ $<
+	$(INKSCAPE) --export-plain-svg=$@ $<
 
 tmp/%-clean.svg: tmp/%.svg
 	$(CLEANER) $(CLEANER_OPTS) $< $@
