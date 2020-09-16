@@ -20,6 +20,16 @@
 \usepackage{pgfplots}
 \setmainfont{Arimo}
 
+% For reproducible builds
+\pdfvariable suppressoptionalinfo \numexpr
+        0
+    +   1 % PTEX.FullBanner - LuaTeX and TeX Live versions
+    +  32 % CreationDate - date and time
+    +  64 % ModDate - date and time
+    + 128 % Producer - LuaTeX version
+    + 512 % ID - computed from current time and full path of output file
+\relax
+
 % PGFPLOTS options
 \pgfplotsset{compat=newest}
 \pgfplotsset{table/x=Score,table/y=Benchmark}

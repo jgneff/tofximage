@@ -127,10 +127,9 @@ tmp/metadata.xml: metadata.xmp
 list: $(imgfiles)
 	$(EXIFTOOL) $(exif_xmp) $^
 
-# Add PDF files after enabling reproducible builds (pdfTeX 1.40.17 or later).
 pub:
 	$(call publish,*.md,_includes)
-	$(call publish,*2020-06-??.png *2020-06-??.svg,2020-06)
+	$(call publish,*2020-06-??.pdf *2020-06-??.png *2020-06-??.svg,2020-06)
 
 clean:
 	rm -f tmp/* out/*
