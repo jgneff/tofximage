@@ -25,13 +25,10 @@ ubuntu13=/usr/lib/jvm/java-13-openjdk-$arch
 ubuntu14=/usr/lib/jvm/java-14-openjdk-$arch
 
 # Oracle builds
-oracle14=$HOME/opt/jdk-14.0.1
+oracle15=$HOME/opt/jdk-15
 
 # AdoptOpenJDK builds
-adopt11=$HOME/opt/jdk-11.0.7+10
-adopt12=$HOME/opt/jdk-12.0.2+10
-adopt13=$HOME/opt/jdk-13.0.2+8
-adopt14=$HOME/opt/jdk-14.0.1+7
+adopt15=$HOME/opt/jdk-15+36-jre
 
 # Example: writeTo..New
 filters=""

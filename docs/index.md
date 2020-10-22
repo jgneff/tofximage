@@ -14,3 +14,7 @@ Although some of the methods convert the alpha values incorrectly, they are incl
 ## 2020-06
 
 The results of my first round of tests in June 2020 are published on the [2020-06](2020-06/) page.
+
+## 2020-09
+
+The results of my second round of tests in September 2020 are published on the [2020-09](2020-09/) page.

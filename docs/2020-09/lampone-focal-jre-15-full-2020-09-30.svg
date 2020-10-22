@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg height="456.75201" viewBox="0 0 759.91864 456.75201" width="759.91864" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<metadata>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/">
+<rdf:Description>
+<cc:attributionName>John Neffenger</cc:attributionName>
+<cc:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<dc:title>AWT to JavaFX Image Conversion Benchmarks</dc:title>
+<xmpRights:Marked>True</xmpRights:Marked>
+<xmpRights:UsageTerms>This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.</xmpRights:UsageTerms>
+<xmpRights:WebStatement rdf:resource="https://github.com/jgneff/tofximage"/>
+</rdf:Description>
+</rdf:RDF>
+</metadata>
+<clipPath id="a">
+<path d="m0 21.00117h432.00221v-252.00141h-432.00221z"/>
+</clipPath>
+<g transform="matrix(1.3333333 0 0 -1.3333333 171.6573290419 89.8160091734)">
+<path d="m0 21.00117v-4.25245m57.6003 4.25245v-4.25245m57.60029 4.25245v-4.25245m57.6003 4.25245v-4.25245m57.60029 4.25245v-4.25245m57.6003 4.25245v-4.25245m57.6003 4.25245v-4.25245m57.60029 4.25245v-4.25245m-403.20207-247.74896v4.25247m57.6003-4.25247v4.25247m57.60029-4.25247v4.25247m57.6003-4.25247v4.25247m57.60029-4.25247v4.25247m57.6003-4.25247v4.25247m57.6003-4.25247v4.25247m57.60029-4.25247v4.25247" fill="none" stroke="#808080" stroke-miterlimit="10" stroke-width=".19925"/>
+<path d="m-4.25214 0h4.25214m-4.25214-16.15376h4.25214m-4.25214-16.15378h4.25214m-4.25214-16.15378h4.25214m-4.25214-16.15376h4.25214m-4.25214-16.15378h4.25214m-4.25214-16.15378h4.25214m-4.25214-16.15378h4.25214m-4.25214-16.15376h4.25214m-4.25214-16.15378h4.25214m-4.25214-16.15377h4.25214m-4.25214-16.15378h4.25214m-4.25214-16.15377h4.25214m-4.25214-16.15377h4.25214" fill="none" stroke="#808080" stroke-miterlimit="10" stroke-width=".19925"/>
+<path d="m0 21.00117v-252.00141h432.00221v252.00141z" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width=".3985"/>
+<g font-family="Arimo,Liberation Sans,Arial,sans-serif" font-size="10.90909">
+<text transform="matrix(1 0 0 -1 -3.034 -242.799)"><tspan x="0" y="0">0</tspan></text>
+<text transform="matrix(1 0 0 -1 51.532 -242.799)"><tspan x="0 6.067636" y="0">10</tspan></text>
+<text transform="matrix(1 0 0 -1 109.132 -242.799)"><tspan x="0 6.067636" y="0">20</tspan></text>
+<text transform="matrix(1 0 0 -1 166.731 -242.799)"><tspan x="0 6.067636" y="0">30</tspan></text>
+<text transform="matrix(1 0 0 -1 224.331 -242.799)"><tspan x="0 6.067636" y="0">40</tspan></text>
+<text transform="matrix(1 0 0 -1 281.931 -242.799)"><tspan x="0 6.067636" y="0">50</tspan></text>
+<text transform="matrix(1 0 0 -1 339.53 -242.799)"><tspan x="0 6.067636" y="0">60</tspan></text>
+<text transform="matrix(1 0 0 -1 397.13 -242.799)"><tspan x="0 6.067636" y="0">70</tspan></text>
+<text transform="matrix(1 0 0 -1 -86.051 -3.899)"><tspan x="0 3.030545 9.098181 12.730908 20.007271 26.074907 31.529451 37.597088 46.082176 49.714905 55.782539 61.850178 65.482903 71.550537" y="0">forEachOrdered</tspan></text>
+<text transform="matrix(1 0 0 -1 -82.413 -20.053)"><tspan x="0 3.030545 9.098181 12.730908 20.007271 26.074907 31.529451 37.597088 44.873451 50.941086 54.573814 60.641449 63.065449 65.489449 71.557083" y="0">forEachParallel</tspan></text>
+<text transform="matrix(1 0 0 -1 -85.455 -35.128)"><tspan x="0 3.030545 9.098181 12.730908 18.798544 24.86618 30.933815 37.00145 42.455997 50.334541 56.402176 61.856724 64.887268 70.954903" y="0">forLoopsNested</tspan></text>
+<text transform="matrix(1 0 0 -1 -109.1 -51.281)"><tspan x="0 6.067636 12.135272 15.165817 22.442181 26.074907 32.142544 38.210178 45.486542 49.11927 55.186905 58.217449 64.285088 67.315628 73.38327 80.65963 86.114174 89.144722 95.212357" y="0">putArgbPreIntoBytes</tspan></text>
+<text transform="matrix(1 0 0 -1 -99.4 -67.435)"><tspan x="0 6.067636 12.135272 15.165817 22.442181 26.074907 32.142544 38.210178 45.486542 49.11927 55.186905 58.217449 64.285088 67.315628 73.38327 76.413811 82.481445 85.511993" y="0">putArgbPreIntoInts</tspan></text>
+<text transform="matrix(1 0 0 -1 -95.144 -83.389)"><tspan x="0 6.067636 12.135272 15.165817 22.442181 26.074907 29.707634 35.775269 41.229816 44.260361 50.327995 53.35854 59.426178 66.702538 72.157082 75.18763 81.255264" y="0">putArrayIntoBytes</tspan></text>
+<text transform="matrix(1 0 0 -1 -87.868 -99.742)"><tspan x="0 6.067636 12.135272 15.165817 23.044361 25.468361 29.101088 35.168724 40.623268 43.653816 46.684361 52.751995 55.782539 61.850178 64.880722 70.948357 73.978905" y="0">putDirectIntoInts</tspan></text>
+<text transform="matrix(1 0 0 -1 -81.806 -115.896)"><tspan x="0 5.454545 11.522181 14.552726 21.829088 25.461817 31.529451 37.597088 44.873451 50.327995 57.604359 61.237087 67.304718" y="0">setArgbAsArgb</tspan></text>
+<text transform="matrix(1 0 0 -1 -98.782 -132.049)"><tspan x="0 5.454545 11.522181 14.552726 21.829088 25.461817 31.529451 37.597088 44.873451 50.327995 57.604359 61.237087 67.304718 73.37236 80.64872 84.281448" y="0">setArgbAsArgbPre</tspan></text>
+<text transform="matrix(1 0 0 -1 -98.782 -148.203)"><tspan x="0 5.454545 11.522181 14.552726 21.829088 25.461817 31.529451 37.597088 44.873451 48.506176 54.573814 61.850178 67.304718 74.581085 78.213814 84.281448" y="0">setArgbPreAsArgb</tspan></text>
+<text transform="matrix(1 0 0 -1 -115.758 -164.356)"><tspan x="0 5.454545 11.522181 14.552726 21.829088 25.461817 31.529451 37.597088 44.873451 48.506176 54.573814 61.850178 67.304718 74.581085 78.213814 84.281448 90.349083 97.62545 101.25817" y="0">setArgbPreAsArgbPre</tspan></text>
+<text transform="matrix(1 0 0 -1 -84.826 -180.51)"><tspan x="0 5.454545 11.522181 14.552726 21.829088 25.461817 29.094543 35.162178 40.616722 47.893085 53.347633 60.623997 64.256721 70.324356" y="0">setArrayAsArgb</tspan></text>
+<text transform="matrix(1 0 0 -1 -101.802 -196.663)"><tspan x="0 5.454545 11.522181 14.552726 21.829088 25.461817 29.094543 35.162178 40.616722 47.893085 53.347633 60.623997 64.256721 70.324356 76.391991 83.668358 87.301086" y="0">setArrayAsArgbPre</tspan></text>
+<text transform="matrix(1 0 0 -1 -61.794 -212.617)"><tspan x="0 3.030545 9.098181 15.761454 23.037817 26.068361 35.155632 41.22327 47.290905" y="0">toFXImage</tspan></text>
+</g>
+<g clip-path="url(#a)" stroke="#000" stroke-miterlimit="10" stroke-width=".3985">
+<path d="m0-4.98138h13.14438v9.96277h-13.14438z" fill="#1f78b4"/>
+<path d="m13.14438 0h.09792" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(13.242)"/>
+<path d="m13.14438 0h-.09793" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 13.046 -.001)"/>
+<path d="m0-21.13515h10.68484v9.96277h-10.68484z" fill="#1f78b4"/>
+<path d="m10.68484-16.15376h.05184" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(10.736 -16.154)"/>
+<path d="m10.68484-16.15376h-.05184" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 10.633 -16.153)"/>
+<path d="m0-37.28893h13.35173v9.96277h-13.35173z" fill="#1f78b4"/>
+<path d="m13.35173-32.30754h.12671" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(13.478 -32.307)"/>
+<path d="m13.35173-32.30754h-.12671" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 13.225 -32.308)"/>
+<path d="m0-53.4427h87.77132v9.96277h-87.77132z" fill="#1f78b4"/>
+<path d="m87.77132-48.46132h.94464" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(88.715 -48.461)"/>
+<path d="m87.77132-48.46132h-.94464" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 86.825 -48.46)"/>
+<path d="m0-69.59647h87.43724v9.96277h-87.43724z" fill="#1f78b4"/>
+<path d="m87.43724-64.61508h1.10016" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(88.536 -64.614)"/>
+<path d="m87.43724-64.61508h-1.10016" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 86.336 -64.615)"/>
+<path d="m0-85.75024h203.23111v9.96277h-203.23111z" fill="#a6cee3"/>
+<path d="m203.23111-80.76886h2.37314" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(205.602 -80.768)"/>
+<path d="m203.23111-80.76886h-2.37312" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 200.855 -80.769)"/>
+<path d="m0-101.90402h242.75067v9.96277h-242.75067z" fill="#a6cee3"/>
+<path d="m242.75067-96.92264h1.01952" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(243.767 -96.922)"/>
+<path d="m242.75067-96.92264h-1.01951" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 241.728 -96.921)"/>
+<path d="m0-118.0578h331.30536v9.96277h-331.30536z" fill="#1f78b4"/>
+<path d="m331.30536-113.07642h6.3418" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(337.643 -113.075)"/>
+<path d="m331.30536-113.07642h-6.34178" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 324.959 -113.076)"/>
+<path d="m0-134.21156h349.88722v9.96277h-349.88722z" fill="#a6cee3"/>
+<path d="m349.88722-129.23018h7.60324" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(357.486 -129.229)"/>
+<path d="m349.88722-129.23018h-7.60324" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 342.28 -129.228)"/>
+<path d="m0-150.36534h80.16806v9.96277h-80.16806z" fill="#a6cee3"/>
+<path d="m80.16806-145.38396h1.15201" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(81.319 -145.382)"/>
+<path d="m80.16806-145.38396h-1.15199" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 79.015 -145.383)"/>
+<path d="m0-166.51912h82.51817v9.96277h-82.51817z" fill="#1f78b4"/>
+<path d="m82.51817-161.53773h.77184" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(83.289 -161.536)"/>
+<path d="m82.51817-161.53773h-.77185" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 81.745 -161.535)"/>
+<path d="m0-182.6729h172.2767v9.96277h-172.2767z" fill="#1f78b4"/>
+<path d="m172.2767-177.69151h2.09665" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(174.371 -177.689)"/>
+<path d="m172.2767-177.69151h-2.09665" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 170.178 -177.69)"/>
+<path d="m0-198.82666h178.72218v9.96277h-178.72218z" fill="#a6cee3"/>
+<path d="m178.72218-193.84528h1.76833" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(180.488 -193.843)"/>
+<path d="m178.72218-193.84528h-1.76832" fill="#a6cee3"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 176.952 -193.842)"/>
+<path d="m0-214.98044h78.72806v9.96277h-78.72806z" fill="#1f78b4"/>
+<path d="m78.72806-209.99905h.93314" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="translate(79.66 -209.997)"/>
+<path d="m78.72806-209.99905h-.93311" fill="#1f78b4"/>
+<path d="m0 1.99255v-3.9851" fill="none" transform="matrix(-1 0 0 -1 77.794 -209.996)"/>
+</g>
+</g>
+<g font-family="Arimo,Liberation Sans,Arial,sans-serif">
+<text font-size="11.95517" transform="matrix(1.3333333 0 0 1.3333333 345.3613246993 436.1306671822)"><tspan x="0 7.302218 13.951683 17.932755 24.58222 31.231686 37.881153 44.530617 51.180084 57.829548 64.46228 68.443352 71.764496 75.745567 82.395035 92.353691 99.003151 108.30428 114.95374 121.60321 128.90782 134.88541 141.53487 147.51245 154.16191 160.81139 167.46085" y="0">Throughput(framespersecond)</tspan></text>
+<text font-size="11.95517" transform="matrix(1.3333333 0 0 1.3333333 297.5013258958 28.8626773639)"><tspan x="0 7.974098 14.623564 17.280003 19.936441 27.91054 34.560005 37.881153 44.513882 51.163345 53.819786 60.46925 67.118713 71.099785 73.756226 79.73381 89.70681 97.009033 103.6585 106.31493 112.29491 118.2725 126.90652 138.1922 144.84166 154.81467 161.46414 171.43713 180.07117 186.72063 193.37009 200.01956 203.3407 213.31371 219.96317 226.61264 229.93379 236.58325" y="0">BellSoftLibericaFullJRE15onUbuntu20.04</tspan></text>
+<text font-size="10.90909" transform="matrix(1.3333333 0 0 1.3333333 259.5879935103 48.1240102157)"><tspan x="0 6.067636 12.135272 21.224726 30.311998 38.190544 46.677814 52.745449 56.378178 61.832722 67.90036 71.533089 80.633446 87.909813 95.788353 104.87563 110.94326 117.0109 123.07854 131.56799 138.84435 146.7229 158.8429 166.72144 172.78908 176.4218 179.45235 185.51999 190.97453 194.60725 201.88362 210.98398 218.86253 221.28653 224.31708 233.40652 242.50688 250.99197 253.41599 263.72507 269.79269 275.85599 283.73453 291.01089" y="0">900MHz4-coreBCM2836ARMCortex-A7with1GiBofRAM</tspan></text>
+</g>
+<path d="m322.30238-22.86287h87.89914v31.06396h-87.89914z" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width=".3985" transform="matrix(1.3333333 0 0 -1.3333333 171.6573290419 89.8160091734)"/>
+<path d="m0-3.88544h9.56429v2.98883h-9.56429zm0 5.97765h7.17326v2.98883h-7.17326z" fill="#1f78b4" stroke="#000" stroke-miterlimit="10" stroke-width=".3985" transform="matrix(1.3333333 0 0 -1.3333333 605.6386515257 90.4680091571)"/>
+<text font-family="Arimo,Liberation Sans,Arial,sans-serif" font-size="10.90909" transform="matrix(1.3333333 0 0 1.3333333 629.7346509233 94.3506757267)"><tspan x="0 7.878545 13.94618 17.578907 21.211634 27.27927 32.733814" y="0">Correct</tspan></text>
+<path d="m0-3.88544h9.56429v2.98883h-9.56429zm0 5.97765h7.17326v2.98883h-7.17326z" fill="#a6cee3" stroke="#000" stroke-miterlimit="10" stroke-width=".3985" transform="matrix(1.3333333 0 0 -1.3333333 605.6386515257 108.5213420391)"/>
+<text font-family="Arimo,Liberation Sans,Arial,sans-serif" font-size="10.90909" transform="matrix(1.3333333 0 0 1.3333333 629.7346509233 112.5960086039)"><tspan x="0 10.099635 13.732363 19.799999 25.867634 34.957088 41.024723 43.448723 49.516361 55.583996" y="0">Wrongalpha</tspan></text>
+</svg>

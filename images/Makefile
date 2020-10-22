@@ -130,6 +130,7 @@ list: $(imgfiles)
 pub:
 	$(call publish,*.md,_includes)
 	$(call publish,*2020-06-??.pdf *2020-06-??.png *2020-06-??.svg,2020-06)
+	$(call publish,*2020-09-??.pdf *2020-09-??.png *2020-09-??.svg,2020-09)
 
 clean:
 	rm -f tmp/* out/*
